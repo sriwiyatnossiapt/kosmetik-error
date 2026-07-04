@@ -1,6 +1,6 @@
 // Database riwayat TMS sederhana
-const dataTMK = [
-  { nama: "Agus Mira Mandiri Utama, PT", riwayat: "Asam tioglikolat (2023), Merkuri (2024)" },
+    const dataTMK = [
+       { nama: "Agus Mira Mandiri Utama, PT", riwayat: "Asam tioglikolat (2023), Merkuri (2024)" },
   { nama: "Akasha Wira International, PT", riwayat: "Mikroba (2022), Mikroba (2025)" },
   { nama: "Alamanda Global Health, PT", riwayat: "Mikroba (2022), Mikroba (2025)" },
   { nama: "Aleyah Sintasint Farma, PT", riwayat: "Mikroba (2024), Hidrokuinon (2025)" },
@@ -245,1025 +245,689 @@ const dataTMK = [
   { nama: "Zoey Cosmedika Putra, PT", riwayat: "Asam retinoat; Flucinolon; Hidrokuinon (2025)" },
   { nama: "Zogi Cosmeceutical, PT", riwayat: "Mikroba (2023)" },
   { nama: "Zweena Adi Nugraha, CV", riwayat: "Mikroba (2023), Mikroba (2024)" }
-];
 
-// --- DATABASE PENOTIF NEGARA ---
-const databasePenotif = [
-  // NEGARA: THAILAND
-  { nama: "Aladdin Sarana Indonesia, PT", negara: "Thailand" },
-  { nama: "Alliance Cosmetics, PT", negara: "Thailand" },
-  { nama: "Amindoway Jaya, PT", negara: "Thailand" },
-  { nama: "Anugerah Pharmindo Lestari, PT", negara: "Thailand" },
-  { nama: "Aroma Abadi, PT", negara: "Thailand" },
-  { nama: "Aroma Bintang Asia, PT", negara: "Thailand" },
-  { nama: "Balindojaya Sejahtera, PT", negara: "Thailand" },
-  { nama: "Beiersdorf Indonesia, PT", negara: "Thailand" },
-  { nama: "Better Way Indonesia, PT", negara: "Thailand" },
-  { nama: "Bima Artha, PT", negara: "Thailand" },
-  { nama: "Bintang Fajar Abadi, CV", negara: "Thailand" },
-  { nama: "Bio Lotus Indonesia, PT", negara: "Thailand" },
-  { nama: "Cekindo Business International, PT", negara: "Thailand" },
-  { nama: "Citra Gemilang Prima, PT", negara: "Thailand" },
-  { nama: "Citra Usaha Lamindo, PT", negara: "Thailand" },
-  { nama: "Colgate Palmolive Indonesia, PT", negara: "Thailand" },
-  { nama: "Darya-Varia Laboratoria Tbk, PT", negara: "Thailand" },
-  { nama: "DFI Retail Nusantara Tbk, PT", negara: "Thailand" },
-  { nama: "Dhifa Pasti Sukses, PT", negara: "Thailand" },
-  { nama: "Distribusi Kesehatan dan Kecantikan Nusantara, PT", negara: "Thailand" },
-  { nama: "Duta Indonesia Permai, PT", negara: "Thailand" },
-  { nama: "Duta Intidaya Tbk, PT", negara: "Thailand" },
-  { nama: "Era Ventura Indonesia, PT", negara: "Thailand" },
-  { nama: "Eres Revco, PT", negara: "Thailand" },
-  { nama: "Formasi Kreasi Indonesia, PT", negara: "Thailand" },
-  { nama: "Giffindo Sukses Perkasa, PT", negara: "Thailand" },
-  { nama: "Glori Global Sukses, PT", negara: "Thailand" },
-  { nama: "Granton Marketing, PT", negara: "Thailand" },
-  { nama: "Haleon Indonesia Trading, PT", negara: "Thailand" },
-  { nama: "Infiniti Marvela Estella, PT", negara: "Thailand" },
-  { nama: "Infiniti Marvela Levana, PT", negara: "Thailand" },
-  { nama: "Inova Pharmaceuticals Indonesia, PT", negara: "Thailand" },
-  { nama: "Johnson & Johnson Indonesia, PT", negara: "Thailand" },
-  { nama: "KK Indonesia, PT", negara: "Thailand" },
-  { nama: "KKI Nusantara Sukses, PT", negara: "Thailand" },
-  { nama: "Koleksi Jaya, PT", negara: "Thailand" },
-  { nama: "Kurnia Cosmolab Indonesia, PT", negara: "Thailand" },
-  { nama: "Laneige Indonesia Pacific, PT", negara: "Thailand" },
-  { nama: "L'Oreal Indonesia, PT", negara: "Thailand" },
-  { nama: "Manna Indo Selaras, PT", negara: "Thailand" },
-  { nama: "Mega Lifesciences, PT", negara: "Thailand" },
-  { nama: "Miano Esensial Jaya, PT", negara: "Thailand" },
-  { nama: "Mimi Global Asia, PT", negara: "Thailand" },
-  { nama: "Mitra Bersama Jaya, PT", negara: "Thailand" },
-  { nama: "Mitra Selaras Sempurna, PT", negara: "Thailand" },
-  { nama: "Monica Lestari, PT", negara: "Thailand" },
-  { nama: "Muaq Berkah Sejahtera, PT", negara: "Thailand" },
-  { nama: "Multi Indocitra Tbk, PT", negara: "Thailand" },
-  { nama: "Naraay Anugerah Indonesia, PT", negara: "Thailand" },
-  { nama: "Narchi Gold Indonesia, PT", negara: "Thailand" },
-  { nama: "Natural Alam Abadi, PT", negara: "Thailand" },
-  { nama: "Niaga Warna Persada, PT", negara: "Thailand" },
-  { nama: "Nosredna, CV", negara: "Thailand" },
-  { nama: "Nu Skin Distribution Indonesia, PT", negara: "Thailand" },
-  { nama: "Panen Selaras Adiperkasa, PT", negara: "Thailand" },
-  { nama: "Paragon Technology And Innovation, PT", negara: "Thailand" },
-  { nama: "Parama Global Inspira, PT", negara: "Thailand" },
-  { nama: "Procter & Gamble Home Products Indonesia, PT", negara: "Thailand" },
-  { nama: "Procter & Gamble Operations Indonesia, PT", negara: "Thailand" },
-  { nama: "PZ Cussons Indonesia, PT", negara: "Thailand" },
-  { nama: "Rahmat Eka Yaksa, PT", negara: "Thailand" },
-  { nama: "Raja Asia Perkasa, PT", negara: "Thailand" },
-  { nama: "Ran Kosmetik Indonesia, PT", negara: "Thailand" },
-  { nama: "Siam Nusantara Sinergi, PT", negara: "Thailand" },
-  { nama: "Social Bella Indonesia, PT", negara: "Thailand" },
-  { nama: "Soho Industri Pharmasi, PT", negara: "Thailand" },
-  { nama: "Sukses Kalimantan Struktur, PT", negara: "Thailand" },
-  { nama: "Tanamas Kosmetik Indonesia, PT", negara: "Thailand" },
-  { nama: "Testing Varperush, PT", negara: "Thailand" },
-  { nama: "Tirta Buana Indoraya, PT", negara: "Thailand" },
-  { nama: "Trilestari Indometika Sejati, PT", negara: "Thailand" },
-  { nama: "UICCP Indonesia, PT", negara: "Thailand" },
-  { nama: "Unilever Enterprises Indonesia, PT", negara: "Thailand" },
-  { nama: "Unilever Indonesia Tbk, PT", negara: "Thailand" },
-  { nama: "Unirama Sukses Internasional, PT", negara: "Thailand" },
-  { nama: "Universal Jaya Sentosa, PT", negara: "Thailand" },
-  { nama: "Varia Niaga Sukses, PT", negara: "Thailand" },
-  { nama: "Victoria Care Indonesia Tbk, PT", negara: "Thailand" },
-  { nama: "Wicaksana Overseas International Tbk, PT", negara: "Thailand" },
-  // NEGARA: FILIPINA
-  { nama: "Darya-Varia Laboratoria Tbk, PT", negara: "Filipina" },
-  { nama: "Lloyd Laboratories Indonesia, PT", negara: "Filipina" },
-  { nama: "RDL Distribusi Indonesia, PT", negara: "Filipina" },
-  { nama: "UICCP Indonesia, PT", negara: "Filipina" },
-  { nama: "Unilever Enterprises Indonesia, PT", negara: "Filipina" },
-  { nama: "Unza Vitalis, PT", negara: "Filipina" },
-  // NEGARA: TIONGKOK
-  { nama: "Abeaudy Sukses International, PT", negara: "Tiongkok" },
-  { nama: "Aepura Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Aestetika Sejahtera Nusantara, PT", negara: "Tiongkok" },
-  { nama: "Agung Mulia Chemindo, PT", negara: "Tiongkok" },
-  { nama: "Agung Sejahtera, CV", negara: "Tiongkok" },
-  { nama: "Akasha Wira International Tbk, PT", negara: "Tiongkok" },
-  { nama: "Alfa Viva Famili, PT", negara: "Tiongkok" },
-  { nama: "Alia Kreasi Cantika, PT", negara: "Tiongkok" },
-  { nama: "Aliyachat Sukses Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Alliance Cosmetics, PT", negara: "Tiongkok" },
-  { nama: "Alpha Bella Pasifik, PT", negara: "Tiongkok" },
-  { nama: "Alpha Delta Nusantara, PT", negara: "Tiongkok" },
-  { nama: "Amara Maju Jaya, PT", negara: "Tiongkok" },
-  { nama: "Amindoway Jaya, PT", negara: "Tiongkok" },
-  { nama: "Amira Estetika Mulia, PT", negara: "Tiongkok" },
-  { nama: "Anak Seneng Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Aneka Digital Online, PT", negara: "Tiongkok" },
-  { nama: "Annerolyn Sukses Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Antar Benua Bersaudara, CV", negara: "Tiongkok" },
-  { nama: "Ante Ecommerce Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Anugerah Bangun Jelita, PT", negara: "Tiongkok" },
-  { nama: "Anugerah Familindo Lestari, PT", negara: "Tiongkok" },
-  { nama: "Anugerah Filia Asia, PT", negara: "Tiongkok" },
-  { nama: "Anugerah Indoraya Cemerlang, PT", negara: "Tiongkok" },
-  { nama: "Anugerah Raja Mizumi, PT", negara: "Tiongkok" },
-  { nama: "Anugrah Inti Persada, CV", negara: "Tiongkok" },
-  { nama: "Anve Estetika Indonesia, CV", negara: "Tiongkok" },
-  { nama: "Aroma Abadi, PT", negara: "Tiongkok" },
-  { nama: "Aroma Bintang Asia, PT", negara: "Tiongkok" },
-  { nama: "Aromatik International Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Arta Anugerah Trading, PT", negara: "Tiongkok" },
-  { nama: "Asanka Wijaya, CV", negara: "Tiongkok" },
-  { nama: "Asia Anugerah Biologis, PT", negara: "Tiongkok" },
-  { nama: "Astra Taipan Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Attamana, CV", negara: "Tiongkok" },
-  { nama: "Aurora Cosmo Beauty, PT", negara: "Tiongkok" },
-  { nama: "Aurora Enam Mentari, PT", negara: "Tiongkok" },
-  { nama: "Aventrada Jaya Dharma, PT", negara: "Tiongkok" },
-  { nama: "Avione Surya Cemerlang, PT", negara: "Tiongkok" },
-  { nama: "Avo Innovation Technology, PT", negara: "Tiongkok" },
-  { nama: "Ayu Agung, PT", negara: "Tiongkok" },
-  { nama: "Bahagia Mandiri Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Bali Babe Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Bansko Btater Global, PT", negara: "Tiongkok" },
-  { nama: "Barclay Products, PT", negara: "Tiongkok" },
-  { nama: "BBG Trada Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Beach Street Asia, PT", negara: "Tiongkok" },
-  { nama: "Beamarry Indonesia Makmur, PT", negara: "Tiongkok" },
-  { nama: "Beaute Luxe Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Beautika Cipta Mandiri, PT", negara: "Tiongkok" },
-  { nama: "Beautimax Kosmetika Berjaya, PT", negara: "Tiongkok" },
-  { nama: "Beauty Bath Concept International, PT", negara: "Tiongkok" },
-  { nama: "Beauty Essential Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Beauty Source Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Bensen Guna Mandiri, PT", negara: "Tiongkok" },
-  { nama: "Berhan, CV", negara: "Tiongkok" },
-  { nama: "Berkah Tiga Matahari, PT", negara: "Tiongkok" },
-  { nama: "Berkilau Cantik Alami, PT", negara: "Tiongkok" },
-  { nama: "Bersama Perawatan Cantik, PT", negara: "Tiongkok" },
-  { nama: "Better Way Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Bima Artha, PT", negara: "Tiongkok" },
-  { nama: "Bintang Busana Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Bintang Cemerlang, PT", negara: "Tiongkok" },
-  { nama: "Bintang Semesta Cakrawala, PT", negara: "Tiongkok" },
-  { nama: "Bio Secret Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Biying Biotech International, PT", negara: "Tiongkok" },
-  { nama: "Blue Origin International, PT", negara: "Tiongkok" },
-  { nama: "Boehls Cosmetics Trading, PT", negara: "Tiongkok" },
-  { nama: "Bonnie Coo Beauty, PT", negara: "Tiongkok" },
-  { nama: "Botryo Herba Bioteknologi, PT", negara: "Tiongkok" },
-  { nama: "Brahma Tek Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Budi Jaya Amenities, PT", negara: "Tiongkok" },
-  { nama: "Bunee Sejaya", negara: "Tiongkok" },
-  { nama: "Bunto Mulia Abadi, PT", negara: "Tiongkok" },
-  { nama: "Bydesign Cipta Graha Indah, PT", negara: "Tiongkok" },
-  { nama: "Cahaya Asia Gemilang, PT", negara: "Tiongkok" },
-  { nama: "Cahaya Aurora Makmur, PT", negara: "Tiongkok" },
-  { nama: "Cahaya Cantika Nusantara, PT", negara: "Tiongkok" },
-  { nama: "Cahaya Daring Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Cakra Daya Makmur, PT", negara: "Tiongkok" },
-  { nama: "Callysta Abadi Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Cantika Tanjaya Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Cantikme Beautycare Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Catel, CV", negara: "Tiongkok" },
-  { nama: "Cekindo Business International, PT", negara: "Tiongkok" },
-  { nama: "Cerah Semesta Gemilang, PT", negara: "Tiongkok" },
-  { nama: "Chosen Mitra Abadi, PT", negara: "Tiongkok" },
-  { nama: "Christopher Tarigans Concept, PT", negara: "Tiongkok" },
-  { nama: "Cikos Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Cipta Makmur Utama, PT", negara: "Tiongkok" },
-  { nama: "Citra Alam Aromindo, PT", negara: "Tiongkok" },
-  { nama: "Citra Harapan Anugrah, PT", negara: "Tiongkok" },
-  { nama: "Citra Kosmetika Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Citra Nusa Insan Cemerlang, PT", negara: "Tiongkok" },
-  { nama: "Citra Pasifik Kosmetik, PT", negara: "Tiongkok" },
-  { nama: "Citra Pratama Kosmetindo, PT", negara: "Tiongkok" },
-  { nama: "Citra Usaha Lamindo, PT", negara: "Tiongkok" },
-  { nama: "Claira Usaha Sukses, PT", negara: "Tiongkok" },
-  { nama: "Cle Cosmetics International, PT", negara: "Tiongkok" },
-  { nama: "Cobra Dental Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Cocosight Beauty International, PT", negara: "Tiongkok" },
-  { nama: "Colgate Palmolive Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Cosme Jaya Utama, PT", negara: "Tiongkok" },
-  { nama: "Crystal Beauty Solution, PT", negara: "Tiongkok" },
-  { nama: "Dargiss Inti Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Dawey Etech Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Dedi Jaya Sentosa, CV", negara: "Tiongkok" },
-  { nama: "Delight Connection Cosmetics Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Dewha Skincare Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Dewi Maju Bahagia, PT", negara: "Tiongkok" },
-  { nama: "Dexter International Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Diamante Abadi Jaya, PT", negara: "Tiongkok" },
-  { nama: "Dipori Kreatif Rekatama, PT", negara: "Tiongkok" },
-  { nama: "Distribus Kesehatan dan Kecantikan Nusantara, PT", negara: "Tiongkok" },
-  { nama: "Doctor Kim Biotech Beauty, PT", negara: "Tiongkok" },
-  { nama: "Doctor Plant Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Dojako Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Dongbang Medical Global, PT", negara: "Tiongkok" },
-  { nama: "Dream Skin Care, PT", negara: "Tiongkok" },
-  { nama: "Dresyee Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Dua Srikandi Lestari, PT", negara: "Tiongkok" },
-  { nama: "Dunia Kecantikan Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Duta Cantik Dewata, PT", negara: "Tiongkok" },
-  { nama: "Duta Intidaya Tbk, PT", negara: "Tiongkok" },
-  { nama: "Efja, CV", negara: "Tiongkok" },
-  { nama: "Eka Jaya Internasional, PT", negara: "Tiongkok" },
-  { nama: "Ekawangsa Alexindo, PT", negara: "Tiongkok" },
-  { nama: "Ekspedisi Data Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Elc Beauty Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Emerald Cipta Utama, PT", negara: "Tiongkok" },
-  { nama: "Empower Beauty Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Enchanted Beauty Sparkle, CV", negara: "Tiongkok" },
-  { nama: "Era Ventura Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Eres Revco, PT", negara: "Tiongkok" },
-  { nama: "Esa Jaya Makmur Abadi, PT", negara: "Tiongkok" },
-  { nama: "Estetika Infiniti Makmur, PT", negara: "Tiongkok" },
-  { nama: "Estetika Pro International, PT", negara: "Tiongkok" },
-  { nama: "Evaglow Skin Essen, PT", negara: "Tiongkok" },
-  { nama: "Evo Sinergi Asia, PT", negara: "Tiongkok" },
-  { nama: "Evy Beautrec, CV", negara: "Tiongkok" },
-  { nama: "Eye 1 Indo Investment, PT", negara: "Tiongkok" },
-  { nama: "Fabindo Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Fajar Makmur Abadi, PT", negara: "Tiongkok" },
-  { nama: "FCL Internasional Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Feali Internasional Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Fensoye Beauty Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Feodora Makmur Abadi, PT", negara: "Tiongkok" },
-  { nama: "Focusee Technology Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Forever Nurture Internasional, PT", negara: "Tiongkok" },
-  { nama: "Formasi Kreasi Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Formula Inti Raharja Sinarmas Tridjaya, CV", negara: "Tiongkok" },
-  { nama: "Fortuna Arunika Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Fyc Maju Terus, PT", negara: "Tiongkok" },
-  { nama: "Gabrielle Odette Dwitunggal, PT", negara: "Tiongkok" },
-  { nama: "Gajah Gading Mas, CV", negara: "Tiongkok" },
-  { nama: "Gellin, UD", negara: "Tiongkok" },
-  { nama: "Genero Pharmaceuticals, PT", negara: "Tiongkok" },
-  { nama: "Global Energy Alkesindo, PT", negara: "Tiongkok" },
-  { nama: "Global Green International, PT", negara: "Tiongkok" },
-  { nama: "Global Jaya Ultima, PT", negara: "Tiongkok" },
-  { nama: "Global Kreasi Indah, PT", negara: "Tiongkok" },
-  { nama: "Global Laboratory, CV", negara: "Tiongkok" },
-  { nama: "Global Next Biotech, PT", negara: "Tiongkok" },
-  { nama: "Global Nutri Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Global Trade Internusa, PT", negara: "Tiongkok" },
-  { nama: "Glori Global Sukses, PT", negara: "Tiongkok" },
-  { nama: "Gloria Origita Cosmetics, PT", negara: "Tiongkok" },
-  { nama: "Gmee Technology Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Golden Belle Global, PT", negara: "Tiongkok" },
-  { nama: "Gondowangi Tradisional Kosmetika, PT", negara: "Tiongkok" },
-  { nama: "Good Sale Tech, PT", negara: "Tiongkok" },
-  { nama: "Graha Supra Mandiri, PT", negara: "Tiongkok" },
-  { nama: "Greenleaf Global Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Guna Sarana Meditama", negara: "Tiongkok" },
-  { nama: "Guoyu Feng Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Hae Cahaya Global, PT", negara: "Tiongkok" },
-  { nama: "Haimeili Jaya, CV", negara: "Tiongkok" },
-  { nama: "Haleon Indonesia Trading, PT", negara: "Tiongkok" },
-  { nama: "Happi Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Harta Cosmo Mestika Indah, PT", negara: "Tiongkok" },
-  { nama: "Has Maju Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Hawley & Hazel Distribution Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Hebe Beauty Style, PT", negara: "Tiongkok" },
-  { nama: "Hello White Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Herca Cipta Dermal Perdana, PT", negara: "Tiongkok" },
-  { nama: "Heros Sagita Fortino, PT", negara: "Tiongkok" },
-  { nama: "Hexze Cosmetic Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Hidup Senantiasa Senyum, PT", negara: "Tiongkok" },
-  { nama: "Himalaya Wellness Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Hobe Bar Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Huagao Trading International, PT", negara: "Tiongkok" },
-  { nama: "Huaho Glorious Innovation, PT", negara: "Tiongkok" },
-  { nama: "Hypefast Distribusi Nusantara, PT", negara: "Tiongkok" },
-  { nama: "Indah Cahaya Group, PT", negara: "Tiongkok" },
-  { nama: "Indah Mulia Abadi, CV", negara: "Tiongkok" },
-  { nama: "Indo Chic Trading, PT", negara: "Tiongkok" },
-  { nama: "Indo Jaya Kosmetik, CV", negara: "Tiongkok" },
-  { nama: "Indo Online Jaya, PT", negara: "Tiongkok" },
-  { nama: "Indo Online Pratama, PT", negara: "Tiongkok" },
-  { nama: "Indo Tama Glory, PT", negara: "Tiongkok" },
-  { nama: "Indocos Global Trading, PT", negara: "Tiongkok" },
-  { nama: "Indotama Sentosa Lestari, PT", negara: "Tiongkok" },
-  { nama: "Inow Global Internasional, PT", negara: "Tiongkok" },
-  { nama: "Inspirasi Untuk Wanita, PT", negara: "Tiongkok" },
-  { nama: "Inti Kreasi Indonesia, CV", negara: "Tiongkok" },
-  { nama: "Inti Muda Andalan, PT", negara: "Tiongkok" },
-  { nama: "Ivy Beauty Collection, PT", negara: "Tiongkok" },
-  { nama: "Jakarta Digital Nusantara, PT", negara: "Tiongkok" },
-  { nama: "Jala Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Java Global Kosmetika, PT", negara: "Tiongkok" },
-  { nama: "Javinci Berkat Kreatif Sentosa, PT", negara: "Tiongkok" },
-  { nama: "Jay Ecommerce Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Jaya Indah Abadi Niaga Gemilang, PT", negara: "Tiongkok" },
-  { nama: "Jaya Rahayu Bahagia, PT", negara: "Tiongkok" },
-  { nama: "Jaysuling Cosmetics Beauty, PT", negara: "Tiongkok" },
-  { nama: "JEC Kosmetik Indo, CV", negara: "Tiongkok" },
-  { nama: "Jelita Anugerah Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Jelita Indah Berseri, PT", negara: "Tiongkok" },
-  { nama: "Jenny Cosmetics, PT", negara: "Tiongkok" },
-  { nama: "Jichong Trada Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Jimon Group Indonesia, PT", negara: "Tiongkok" },
-  { nama: "JNR Sosial Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Joint Synergy Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Jowell Group Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Kaleido Kosmetik Internasional, PT", negara: "Tiongkok" },
-  { nama: "Kalimas Mitra Perkasa, PT", negara: "Tiongkok" },
-  { nama: "Kammacitta Ekspor Impor, PT", negara: "Tiongkok" },
-  { nama: "Kao Indonesia Distribution, PT", negara: "Tiongkok" },
-  { nama: "Kapuas Lintas Utama, PT", negara: "Tiongkok" },
-  { nama: "Karya Arsa Loka, PT", negara: "Tiongkok" },
-  { nama: "Kecantikan Permata Indo, PT", negara: "Tiongkok" },
-  { nama: "Kei Nusantara Persada, PT", negara: "Tiongkok" },
-  { nama: "Keva Cosmetics Internasional, PT", negara: "Tiongkok" },
-  { nama: "Kilau Abadi Sempurna, PT", negara: "Tiongkok" },
-  { nama: "Kilau Interfarma Sakti, PT", negara: "Tiongkok" },
-  { nama: "Kilau Pesona Tsaritsa, PT", negara: "Tiongkok" },
-  { nama: "Kinara Sinergi Aura, PT", negara: "Tiongkok" },
-  { nama: "KKV International Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Koleksi Jaya, PT", negara: "Tiongkok" },
-  { nama: "Komar Cosmetics Technology, PT", negara: "Tiongkok" },
-  { nama: "Kosme Pusat Distribusi, PT", negara: "Tiongkok" },
-  { nama: "Kreasi Pesona Alami, PT", negara: "Tiongkok" },
-  { nama: "Kyo Cipta Kosmetindo Nirmala, PT", negara: "Tiongkok" },
-  { nama: "Laif Untuk Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Laleah Kosmetik Indo, PT", negara: "Tiongkok" },
-  { nama: "Lanbena Trada International, PT", negara: "Tiongkok" },
-  { nama: "Laskar Ayu Pertiwi, PT", negara: "Tiongkok" },
-  { nama: "Lautan Mas Sunardi, CV", negara: "Tiongkok" },
-  { nama: "Lestari Estetik Indah, PT", negara: "Tiongkok" },
-  { nama: "Lets Cosmetic Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Lets Glow Group International, PT", negara: "Tiongkok" },
-  { nama: "Lily Kreasi Inovasi, PT", negara: "Tiongkok" },
-  { nama: "Lime International Trading, PT", negara: "Tiongkok" },
-  { nama: "Lincorp Indo Nusa, PT", negara: "Tiongkok" },
-  { nama: "Lintas Mitra Perkasa, PT", negara: "Tiongkok" },
-  { nama: "Lion Wings, PT", negara: "Tiongkok" },
-  { nama: "Livas Wijaya Global, PT", negara: "Tiongkok" },
-  { nama: "Liya Cosmetics Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Loe Cantik Kita Cuan, PT", negara: "Tiongkok" },
-  { nama: "Lola Rose Beauty Trading, PT", negara: "Tiongkok" },
-  { nama: "L'Oreal Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Lsy Makmur Sentosa, PT", negara: "Tiongkok" },
-  { nama: "Lumi Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Luna Woo Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Luxasia Indonesia, PT", negara: "Tiongkok" },
-  { nama: "MS Union International, PT", negara: "Tiongkok" },
-  { nama: "Mag Niaga Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mahar Dharma Putri, PT", negara: "Tiongkok" },
-  { nama: "Mahkota Indah Internasional, PT", negara: "Tiongkok" },
-  { nama: "Maju Kirana Gemilang, PT", negara: "Tiongkok" },
-  { nama: "Maklonlab Global, CV", negara: "Tiongkok" },
-  { nama: "Makmur Sinar Sejati, PT", negara: "Tiongkok" },
-  { nama: "Mandom Indonesia Tbk, PT", negara: "Tiongkok" },
-  { nama: "Manggala Sukses Bersama, PT", negara: "Tiongkok" },
-  { nama: "MAP Aktif Adiperkasa Tbk, PT", negara: "Tiongkok" },
-  { nama: "MAQ Indonesia Abadi, PT", negara: "Tiongkok" },
-  { nama: "Market America Indonesia Imports, PT", negara: "Tiongkok" },
-  { nama: "Marnia International Cosmetik, PT", negara: "Tiongkok" },
-  { nama: "Marui Solusindo Atmadja, PT", negara: "Tiongkok" },
-  { nama: "Matahari, CV", negara: "Tiongkok" },
-  { nama: "Matahari Indonusa, PT", negara: "Tiongkok" },
-  { nama: "Matso Sukses Makmur, PT", negara: "Tiongkok" },
-  { nama: "Maximus Retail Indonesia, PT", negara: "Tiongkok" },
-  { nama: "May Sun Yvan, PT", negara: "Tiongkok" },
-  { nama: "Maya Cosmetics Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mazta Farma, PT", negara: "Tiongkok" },
-  { nama: "Mega Payung Mas Sakti, PT", negara: "Tiongkok" },
-  { nama: "Meishang Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mekar Abadi Sentosa Jaya, CV", negara: "Tiongkok" },
-  { nama: "Melional Bintang Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Merita Abadi Sejahtera, CV", negara: "Tiongkok" },
-  { nama: "Metoo Beauty International, PT", negara: "Tiongkok" },
-  { nama: "MGI Nusantara Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Miduo Commercial Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mimi Global Asia, PT", negara: "Tiongkok" },
-  { nama: "Minika Perfekta Mandiri, PT", negara: "Tiongkok" },
-  { nama: "Miniso Lifestyle Trading Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Miraigo Teknologi Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mister Wish Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mitra Cantik Alami, CV", negara: "Tiongkok" },
-  { nama: "Mitra Laras Sukses, PT", negara: "Tiongkok" },
-  { nama: "Mitra Mas Sentosa, PT", negara: "Tiongkok" },
-  { nama: "Mitra Selaras Sempurna, PT", negara: "Tiongkok" },
-  { nama: "Miya Ecommerce Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mjoptim Indonesia Abadi, PT", negara: "Tiongkok" },
-  { nama: "Monica Lestari, PT", negara: "Tiongkok" },
-  { nama: "Moseco Cantik Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Muaq Berkah Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Multi Berkat Pratama, PT", negara: "Tiongkok" },
-  { nama: "Multi Indocitra Tbk, PT", negara: "Tiongkok" },
-  { nama: "Multi Kosmetik Lestari, PT", negara: "Tiongkok" },
-  { nama: "Multi Safe Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mumuso Trading Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Mustika Indah Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Mustika Ratu Tbk, PT", negara: "Tiongkok" },
-  { nama: "Mustika Satya Nusantara, PT", negara: "Tiongkok" },
-  { nama: "Mutiara Cantika Bersama, PT", negara: "Tiongkok" },
-  { nama: "Mutiara Erly Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "My Everything Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Naga Perkasa Group, PT", negara: "Tiongkok" },
-  { nama: "Nagatama Synergy Corp, PT", negara: "Tiongkok" },
-  { nama: "Napolopersada Abadi, PT", negara: "Tiongkok" },
-  { nama: "Naraay Anugerah Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Narchi Gold Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Natura Deca Kosmetika, PT", negara: "Tiongkok" },
-  { nama: "Natura Pesona Mandiri, PT", negara: "Tiongkok" },
-  { nama: "Nave Mega Nusantara, PT", negara: "Tiongkok" },
-  { nama: "Nayue Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Nayue Skin Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Niaga Warna Persada, PT", negara: "Tiongkok" },
-  { nama: "North West Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Nosredna, CV", negara: "Tiongkok" },
-  { nama: "Nu Skin Distribution Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Nurraysa Global Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Ocineid Global Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Office Fashion Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Oktagon Inti Pasifik, PT", negara: "Tiongkok" },
-  { nama: "Oliken Abadi Jaya, PT", negara: "Tiongkok" },
-  { nama: "Onesmile Distribution Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Onix Teknologi Makmur, PT", negara: "Tiongkok" },
-  { nama: "Onmouse Trading Group, PT", negara: "Tiongkok" },
-  { nama: "Oriflame Cosmetics Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Otwoo Cosmetic Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Ozzaskin Cantik Muda Alami, PT", negara: "Tiongkok" },
-  { nama: "Palm Burnet Rumania, PT", negara: "Tiongkok" },
-  { nama: "Panca Talentamas, PT", negara: "Tiongkok" },
-  { nama: "Panen Selaras Adiperkasa, PT", negara: "Tiongkok" },
-  { nama: "Pangestu Jaya Abadi, PT", negara: "Tiongkok" },
-  { nama: "Paragon Technology and Innovation, PT", negara: "Tiongkok" },
-  { nama: "Parama Global Inspira, PT", negara: "Tiongkok" },
-  { nama: "Pasifik Distribusi Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Passportindo Asia Global, PT", negara: "Tiongkok" },
-  { nama: "Paten Jaya Abadi, PT", negara: "Tiongkok" },
-  { nama: "PBL Perdagangan International, PT", negara: "Tiongkok" },
-  { nama: "Pentanika Warna Indonesia, CV", negara: "Tiongkok" },
-  { nama: "Pepper Prime Trading, PT", negara: "Tiongkok" },
-  { nama: "Perdagangan Selera Bumi, PT", negara: "Tiongkok" },
-  { nama: "Pesona Gemilang Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Pesona Indah Kosmetik, PT", negara: "Tiongkok" },
-  { nama: "Pharmex Global Astrindo, PT", negara: "Tiongkok" },
-  { nama: "Phileo Republik Perkasa, PT", negara: "Tiongkok" },
-  { nama: "Pink Pick Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Pink Wistle Decoration, CV", negara: "Tiongkok" },
-  { nama: "PMY Trada Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Premiere Beaute Kosmetik, PT", negara: "Tiongkok" },
-  { nama: "Prima Sinergi Internasional, PT", negara: "Tiongkok" },
-  { nama: "Priskila Prima Makmur, PT", negara: "Tiongkok" },
-  { nama: "Procter & Gamble Home Products Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Putikayo International, PT", negara: "Tiongkok" },
-  { nama: "Putra Mandiri, CV", negara: "Tiongkok" },
-  { nama: "Putri Gemilang Berkarya, PT", negara: "Tiongkok" },
-  { nama: "Qianfan Biotechnology International, PT", negara: "Tiongkok" },
-  { nama: "Qincai Cosmetic Internasional, PT", negara: "Tiongkok" },
-  { nama: "Ravalindo Megah Perkasa, PT", negara: "Tiongkok" },
-  { nama: "Relindo Multi Cipta, PT", negara: "Tiongkok" },
-  { nama: "Rembaka, PT", negara: "Tiongkok" },
-  { nama: "Remedy Natural Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Remimpi Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Royal Pesona Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Royal Tata Visindo, PT", negara: "Tiongkok" },
-  { nama: "Rui Lang Technology, PT", negara: "Tiongkok" },
-  { nama: "Rusen Trading Indonesia, PT", negara: "Tiongkok" },
-  { nama: "S & R, CV", negara: "Tiongkok" },
-  { nama: "Sabang Merauke Trading, PT", negara: "Tiongkok" },
-  { nama: "Sahabat Perawatan Kulit Optimal, PT", negara: "Tiongkok" },
-  { nama: "Sai Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Samudera Lindo Group, CV", negara: "Tiongkok" },
-  { nama: "Samudera Makmur Jaya, PT", negara: "Tiongkok" },
-  { nama: "Sangpyo Bersinar Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Saras Subur Abadi, PT", negara: "Tiongkok" },
-  { nama: "Sarua Subur, PT", negara: "Tiongkok" },
-  { nama: "Satya Pranata Jaya, PT", negara: "Tiongkok" },
-  { nama: "Saudara Ekatama Jaya, PT", negara: "Tiongkok" },
-  { nama: "Sekar Estetik Aura, PT", negara: "Tiongkok" },
-  { nama: "Sekawan Kosmetik Wasantara, PT", negara: "Tiongkok" },
-  { nama: "Selfinc Retail Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Semarak Sukha, PT", negara: "Tiongkok" },
-  { nama: "Semoga Berkah Sukses Tiga, PT", negara: "Tiongkok" },
-  { nama: "Sentra Digimarket, CV", negara: "Tiongkok" },
-  { nama: "Senyum Karya Muda, PT", negara: "Tiongkok" },
-  { nama: "Sephora Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Serendippo Makmur Abadi, PT", negara: "Tiongkok" },
-  { nama: "Shanghe Keji Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Shangyang Technology Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Sheng Fei Rui, PT", negara: "Tiongkok" },
-  { nama: "Sheva Jordan Bersama, PT", negara: "Tiongkok" },
-  { nama: "Shunda Sejahtera Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Siap Kirim Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Sinar Gemilang Kosmetik, PT", negara: "Tiongkok" },
-  { nama: "Sinar Grastesse, CV", negara: "Tiongkok" },
-  { nama: "Sinar Mulia Kosmetik, PT", negara: "Tiongkok" },
-  { nama: "Sinar Omega Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Sinar Terang Megantara, PT", negara: "Tiongkok" },
-  { nama: "Sinergi Karisma Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Sinergia Beaute Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Sing Foo Cosmetic, PT", negara: "Tiongkok" },
-  { nama: "Skin Future Lab Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Skin Kosmetika Chandra, CV", negara: "Tiongkok" },
-  { nama: "Sninety Nine Corp, PT", negara: "Tiongkok" },
-  { nama: "Social Bella Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Sonaf Cosmetic Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Spring Letter Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Star Mandiri Global, PT", negara: "Tiongkok" },
-  { nama: "Suaka Kecantikan Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Sukses Agung Sentosa, CV", negara: "Tiongkok" },
-  { nama: "Sumber Ayu Cemerlang, PT", negara: "Tiongkok" },
-  { nama: "Sumber Kosmetika Indah, PT", negara: "Tiongkok" },
-  { nama: "Sumber Teguh Jaya, PT", negara: "Tiongkok" },
-  { nama: "Sumed Jaya Abadi, PT", negara: "Tiongkok" },
-  { nama: "Summer Fix Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Sunoro Trading Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Suntone Wisdom Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Super Home Product Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Surya Kemenangan Sejahtera, PT", negara: "Tiongkok" },
-  { nama: "Swanbella Pesona Makmur Abadi, PT", negara: "Tiongkok" },
-  { nama: "Takara Professional Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Talent International Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Tan Kosmetika Dunia, PT", negara: "Tiongkok" },
-  { nama: "Teguh Pesona, PT", negara: "Tiongkok" },
-  { nama: "The Nail Shoppe, CV", negara: "Tiongkok" },
-  { nama: "Thevan Wellknown Trade, PT", negara: "Tiongkok" },
-  { nama: "Thriveways Trading Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Tian Xing Cloud Supply Chain Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Tiens Indonesia Logistics Trading, PT", negara: "Tiongkok" },
-  { nama: "Tiga Lab Anugrah, PT", negara: "Tiongkok" },
-  { nama: "Timmi Commerce Perdagangan, PT", negara: "Tiongkok" },
-  { nama: "Tiros Jaya Bersama, PT", negara: "Tiongkok" },
-  { nama: "Tirta Kumala Sari, PT", negara: "Tiongkok" },
-  { nama: "Tirta Surya, PT", negara: "Tiongkok" },
-  { nama: "Tissor Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Tjhindatama Mulia, PT", negara: "Tiongkok" },
-  { nama: "Tona Sukses Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Top Glow Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Tosyen Omni Potensi, PT", negara: "Tiongkok" },
-  { nama: "Toys Games Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Tri Sentosa Abadi, PT", negara: "Tiongkok" },
-  { nama: "Trilestari Indometika Sejati, PT", negara: "Tiongkok" },
-  { nama: "Triniti Tunggal Abadi, PT", negara: "Tiongkok" },
-  { nama: "Trio Jaya Kosmestika, PT", negara: "Tiongkok" },
-  { nama: "Trio Kosmetika Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Trivk Maju Bersama, PT", negara: "Tiongkok" },
-  { nama: "Trueve Mitra Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Tuva Global Utama, PT", negara: "Tiongkok" },
-  { nama: "Ubeauty Cosmetics Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Ultra Moon Media, PT", negara: "Tiongkok" },
-  { nama: "UMC Media Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Unibio Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Unilever Enterprises Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Unitary Cosmetic Group, PT", negara: "Tiongkok" },
-  { nama: "Unza Vitalis, PT", negara: "Tiongkok" },
-  { nama: "Uplus Technology Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Urban Beauty Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Vasa Star Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Velindo Estetika Kosmetik, PT", negara: "Tiongkok" },
-  { nama: "Vendome Aroma Beauty, PT", negara: "Tiongkok" },
-  { nama: "Vibrant Glamour Beauty, PT", negara: "Tiongkok" },
-  { nama: "Victoria Care Indonesia Tbk, PT", negara: "Tiongkok" },
-  { nama: "Vigor Trading Group, PT", negara: "Tiongkok" },
-  { nama: "Vitalveil Investment Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Vitamin Organik Indonesia, CV", negara: "Tiongkok" },
-  { nama: "Vitapharm, PT", negara: "Tiongkok" },
-  { nama: "Vitta Natura Kosmetika, PT", negara: "Tiongkok" },
-  { nama: "VNV Mitra Lestari, PT", negara: "Tiongkok" },
-  { nama: "Wahana Putra Akipindo, PT", negara: "Tiongkok" },
-  { nama: "Wanfu Glow Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Wellz Life Global, PT", negara: "Tiongkok" },
-  { nama: "Winida Lestari International, PT", negara: "Tiongkok" },
-  { nama: "Winmax Inovasi Indonesia, PT", negara: "Tiongkok" },
-  { nama: "WNW Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Woleco Amenities & Accessories, PT", negara: "Tiongkok" },
-  { nama: "Wook Global Technology, PT", negara: "Tiongkok" },
-  { nama: "Xianghui Trading Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Xiao Yao Teknology, PT", negara: "Tiongkok" },
-  { nama: "Xing Jian Maoyi, PT", negara: "Tiongkok" },
-  { nama: "Xingchen Cosmetics International Trade, PT", negara: "Tiongkok" },
-  { nama: "Yes San International, PT", negara: "Tiongkok" },
-  { nama: "Yin Jie International Trading, PT", negara: "Tiongkok" },
-  { nama: "Young Vision Kosmetik Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Yozzi Jaya Indonesia, PT", negara: "Tiongkok" },
-  { nama: "Yunyi Ecommerce Indonesia, PT", negara: "Tiongkok" }
-];
+    ];
 
-// ======================================================
-// DATA KATEGORI
-// ======================================================
-const dataKategori = {
-  "Kosmetik Beresiko Tinggi": [
-    "Sediaan bayi",
-    "Sediaan pewarna rambut",
-    "Sediaan perawatan wajah",
-    "Sediaan rias mata dan perawatan sekitar mata",
-    "Sediaan rias wajah (perona pipi)",
-    "Sediaan rias bibir (lip color)",
-    "Sediaan parfum (eau de cologne)",
-    "Sediaan pewarna kuku"
-  ],
-  "Kosmetik dengan riwayat Tidak Memenuhi Syarat": [
-    "Sediaan untuk alis (pensil alis)",
-    "Eye shadow",
-    "Eye liner",
-    "Blush on",
-    "Bedak padat/ compact powder",
-    "Pembersih kulit muka",
-    "Mascara",
-    "Eye Make Up Remover",
-    "Penyegar kulit muka/toner",
-    "Lip colour, Lip liner, Lip glos, Lip care",
-    "Pewarna kuku",
-    "Sediaan parfum (eau de cologne)",
-    "Krim pencerah/Skin lightener",
-    "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume",
-    "krim siang",
-    "krim malam",
-    "Sediaan tabir surya"
-  ],
-  "Kosmetik yang disampling secara mandiri oleh UPT": [
-    "Kosmetik yang diproduksi negara Filipina",
-    "Kosmetik Prioritas",
-    "Kosmetik kasus khusus (Wasprod)",
-    "Mainan berkosmetik",
-    "Kosmetik yang diproduksi negara Thailand",
-    "sediaan untuk kulit berjerawat"
-  ],
-  "Kosmetik yang diproduksi negara Tiongkok": [
-    "Krim malam",
-    "Krim Siang/ Day Cream",
-    "Masker Wajah",
-    "Bedak padat/ compact powder",
-    "Eye Make Up Remover",
-    "Lip colour, Lip liner, Lip glos, Lip care",
-    "Mascara",
-    "Pelembab/ Moisturiser",
-    "Pembersih Kulit Muka",
-    "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume",
-    "lipstik"
-  ],
-  "Kosmetik yang dibuat berdasarkan kontrak produksi": [
-    "Day Cream",
-    "Night Cream",
-    "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume",
-    "Sediaan tabir surya",
-    "Skin aging product",
-    "Pembersih kulit muka",
-    "Penyegar kulit muka/toner",
-    "Pelembab/ Moisturiser",
-    "Krim pencerah/Skin lightener"
-  ],
-  "Kosmetik yang dibuat berdasarkan kuasa merek": [
-    "Day Cream",
-    "Night Cream",
-    "Perawatan Kulit Badan Tangan/ Hand Body Lotion",
-    "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume",
-    "Pembersih kulit muka",
-    "Penyegar kulit muka/toner",
-    "Pelembab/ Moisturiser",
-    "Lip colour, Lip liner, Lip glos, Lip care",
-    "Bedak padat/ compact powder",
-    "Bedak wajah",
-    "Hair Body wash",
-    "Baby Hair Body wash"
-  ],
-  "Kosmetik menengah ke bawah": [
-    "Krim malam",
-    "Krim siang",
-    "Bedak padat/ compact powder",
-    "Pembersih kulit muka",
-    "Lem bulu mata",
-    "Eye Make Up Remover",
-    "Penyegar kulit muka/toner",
-    "Lip colour, Lip liner, Lip glos, Lip care",
-    "Pembersih pewarna kuku/ Nail polish remover",
-    "Perawatan Kulit Badan Tangan/ Hand Body Lotion",
-    "External Intimate Hygiene",
-    "Pelembab/ Moisturiser",
-    "Astringent",
-    "Deodoran / Antiperspiran",
-    "Pembersih Rambut dan Badan/ Hair and Body Wash",
-    "Sediaan untuk kulit berjerawat",
-    "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume"
-  ],
-  "Kosmetik dengan klaim komposisi bahan tertentu": [
-    "Baby cream",
-    "sediaan bayi lainnya",
-    "sediaan tabir surya",
-    "-"
-  ],
-  "Kosmetik yang diduga mengandung DNA porcine": [
-    "pelembam/moisturizer"
-  ],
-  "Kosmetik viral": [
-    "Lip colour, Lip liner, Lip glos, Lip care",
-    "Skin aging product",
-    "Day Cream",
-    "Night Cream",
-    "Pelembab/ Moisturiser"
-  ],
-  "Kosmetik di online official store/reseller": [
-    "Lip colour, Lip liner, Lip glos, Lip care",
-    "Skin aging product",
-    "Day Cream",
-    "Night Cream",
-    "Pelembab/ Moisturiser"
-  ]
-};
+    const databasePenotif = [
 
-// ======================================================
-// DATA BAHAN HEWANI
-// ======================================================
+  // --- NEGARA: THAILAND ---
+  { nama: "Aladdin Sarana Indonesia, PT", negara: "Thailand" }, // [cite: 22]
+  { nama: "Alliance Cosmetics, PT", negara: "Thailand" }, // [cite: 22]
+  { nama: "Amindoway Jaya, PT", negara: "Thailand" }, // [cite: 22]
+  { nama: "Anugerah Pharmindo Lestari, PT", negara: "Thailand" }, // [cite: 22]
+  { nama: "Aroma Abadi, PT", negara: "Thailand" }, // [cite: 22]
+  { nama: "Aroma Bintang Asia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Balindojaya Sejahtera, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Beiersdorf Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Better Way Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Bima Artha, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Bintang Fajar Abadi, CV", negara: "Thailand" }, // [cite: 23]
+  { nama: "Bio Lotus Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Cekindo Business International, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Citra Gemilang Prima, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Citra Usaha Lamindo, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Colgate Palmolive Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Darya-Varia Laboratoria Tbk, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "DFI Retail Nusantara Tbk, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Dhifa Pasti Sukses, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Distribusi Kesehatan dan Kecantikan Nusantara, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Duta Indonesia Permai, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Duta Intidaya Tbk, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Era Ventura Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Eres Revco, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Formasi Kreasi Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Giffindo Sukses Perkasa, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Glori Global Sukses, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Granton Marketing, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Haleon Indonesia Trading, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Infiniti Marvela Estella, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Infiniti Marvela Levana, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Inova Pharmaceuticals Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Johnson & Johnson Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "KK Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "KKI Nusantara Sukses, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Koleksi Jaya, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Kurnia Cosmolab Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Laneige Indonesia Pacific, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "L'Oreal Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Manna Indo Selaras, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Mega Lifesciences, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Miano Esensial Jaya, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Mimi Global Asia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Mitra Bersama Jaya, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Mitra Selaras Sempurna, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Monica Lestari, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Muaq Berkah Sejahtera, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Multi Indocitra Tbk, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Naraay Anugerah Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Narchi Gold Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Natural Alam Abadi, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Niaga Warna Persada, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Nosredna, CV", negara: "Thailand" }, // [cite: 23]
+  { nama: "Nu Skin Distribution Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Panen Selaras Adiperkasa, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Paragon Technology And Innovation, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Parama Global Inspira, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Procter & Gamble Home Products Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Procter & Gamble Operations Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "PZ Cussons Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Rahmat Eka Yaksa, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Raja Asia Perkasa, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Ran Kosmetik Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Siam Nusantara Sinergi, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Social Bella Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Soho Industri Pharmasi, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Sukses Kalimantan Struktur, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Tanamas Kosmetik Indonesia, PT", negara: "Thailand" }, // [cite: 23]
+  { nama: "Testing Varperush, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Tirta Buana Indoraya, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Trilestari Indometika Sejati, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "UICCP Indonesia, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Unilever Enterprises Indonesia, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Unilever Indonesia Tbk, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Unirama Sukses Internasional, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Universal Jaya Sentosa, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Varia Niaga Sukses, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Victoria Care Indonesia Tbk, PT", negara: "Thailand" }, // [cite: 27]
+  { nama: "Wicaksana Overseas International Tbk, PT", negara: "Thailand" }, // [cite: 27]
+
+  // --- NEGARA: FILIPINA ---
+  { nama: "Darya-Varia Laboratoria Tbk, PT", negara: "Filipina" }, // [cite: 30]
+  { nama: "Lloyd Laboratories Indonesia, PT", negara: "Filipina" }, // [cite: 30]
+  { nama: "RDL Distribusi Indonesia, PT", negara: "Filipina" }, // [cite: 30]
+  { nama: "UICCP Indonesia, PT", negara: "Filipina" }, // [cite: 30]
+  { nama: "Unilever Enterprises Indonesia, PT", negara: "Filipina" }, // [cite: 30]
+  { nama: "Unza Vitalis, PT", negara: "Filipina" }, // [cite: 30]
+
+  // --- NEGARA: TIONGKOK (BAGIAN 1: 1-139) ---
+  { nama: "Abeaudy Sukses International, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aepura Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aestetika Sejahtera Nusantara, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Agung Mulia Chemindo, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Agung Sejahtera, CV", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Akasha Wira International Tbk, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Alfa Viva Famili, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Alia Kreasi Cantika, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aliyachat Sukses Sejahtera, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Alliance Cosmetics, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Alpha Bella Pasifik, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Alpha Delta Nusantara, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Amara Maju Jaya, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Amindoway Jaya, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Amira Estetika Mulia, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Anak Seneng Sejahtera, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aneka Digital Online, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Annerolyn Sukses Indonesia, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Antar Benua Bersaudara, CV", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Ante Ecommerce Indonesia, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Anugerah Bangun Jelita, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Anugerah Familindo Lestari, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Anugerah Filia Asia, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Anugerah Indoraya Cemerlang, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Anugerah Raja Mizumi, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Anugrah Inti Persada, CV", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Anve Estetika Indonesia, CV", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aroma Abadi, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aroma Bintang Asia, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aromatik International Indonesia, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Arta Anugerah Trading, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Asanka Wijaya, CV", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Asia Anugerah Biologis, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Astra Taipan Indonesia, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Attamana, CV", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aurora Cosmo Beauty, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aurora Enam Mentari, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Aventrada Jaya Dharma, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Avione Surya Cemerlang, PT", negara: "Tiongkok" }, // [cite: 38]
+  { nama: "Avo Innovation Technology, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Ayu Agung, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bahagia Mandiri Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bali Babe Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bansko Btater Global, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Barclay Products, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "BBG Trada Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Beach Street Asia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Beamarry Indonesia Makmur, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Beaute Luxe Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Beautika Cipta Mandiri, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Beautimax Kosmetika Berjaya, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Beauty Bath Concept International, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Beauty Essential Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Beauty Source Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bensen Guna Mandiri, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Berhan, CV", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Berkah Tiga Matahari, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Berkilau Cantik Alami, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bersama Perawatan Cantik, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Better Way Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bima Artha, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bintang Busana Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bintang Cemerlang, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bintang Semesta Cakrawala, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bio Secret Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Biying Biotech International, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Blue Origin International, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Boehls Cosmetics Trading, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bonnie Coo Beauty, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Botryo Herba Bioteknologi, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Brahma Tek Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Budi Jaya Amenities, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bunee Sejaya", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bunto Mulia Abadi, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Bydesign Cipta Graha Indah, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cahaya Asia Gemilang, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cahaya Aurora Makmur, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cahaya Cantika Nusantara, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cahaya Daring Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cakra Daya Makmur, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Callysta Abadi Sejahtera, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cantika Tanjaya Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cantikme Beautycare Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Catel, CV", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cekindo Business International, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cerah Semesta Gemilang, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Chosen Mitra Abadi, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Christopher Tarigans Concept, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cikos Indonesia, PT", negara: "Tiongkok" }, // [cite: 40]
+  { nama: "Cipta Makmur Utama, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Citra Alam Aromindo, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Citra Harapan Anugrah, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Citra Kosmetika Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Citra Nusa Insan Cemerlang, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Citra Pasifik Kosmetik, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Citra Pratama Kosmetindo, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Citra Usaha Lamindo, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Claira Usaha Sukses, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Cle Cosmetics International, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Cobra Dental Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Cocosight Beauty International, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Colgate Palmolive Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Cosme Jaya Utama, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Crystal Beauty Solution, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dargiss Inti Sejahtera, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dawey Etech Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dedi Jaya Sentosa, CV", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Delight Connection Cosmetics Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dewha Skincare Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dewi Maju Bahagia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dexter International Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Diamante Abadi Jaya, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dipori Kreatif Rekatama, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Distribus Kesehatan dan Kecantikan Nusantara, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Doctor Kim Biotech Beauty, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Doctor Plant Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dojako Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dongbang Medical Global, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dream Skin Care, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dresyee Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dua Srikandi Lestari, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Dunia Kecantikan Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Duta Cantik Dewata, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Duta Intidaya Tbk, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Efja, CV", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Eka Jaya Internasional, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Ekawangsa Alexindo, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Ekspedisi Data Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Elc Beauty Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Emerald Cipta Utama, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Empower Beauty Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Enchanted Beauty Sparkle, CV", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Era Ventura Indonesia, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Eres Revco, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Esa Jaya Makmur Abadi, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Estetika Infiniti Makmur, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Estetika Pro International, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Evaglow Skin Essen, PT", negara: "Tiongkok" }, // [cite: 42]
+  { nama: "Evo Sinergi Asia, PT", negara: "Tiongkok" }, // [cite: 42]
+
+  // --- NEGARA: TIONGKOK (BAGIAN 2: 140-288) ---
+  { nama: "Evy Beautrec, CV", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Eye 1 Indo Investment, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Fabindo Sejahtera, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Fajar Makmur Abadi, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "FCL Internasional Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Feali Internasional Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Fensoye Beauty Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Feodora Makmur Abadi, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Focusee Technology Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Forever Nurture Internasional, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Formasi Kreasi Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Formula Inti Raharja Sinarmas Tridjaya, CV", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Fortuna Arunika Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Fyc Maju Terus, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Gabrielle Odette Dwitunggal, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Gajah Gading Mas, CV", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Gellin, UD", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Genero Pharmaceuticals, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Global Energy Alkesindo, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Global Green International, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Global Jaya Ultima, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Global Kreasi Indah, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Global Laboratory, CV", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Global Next Biotech, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Global Nutri Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Global Trade Internusa, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Glori Global Sukses, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Gloria Origita Cosmetics, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Gmee Technology Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Golden Belle Global, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Gondowangi Tradisional Kosmetika, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Good Sale Tech, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Graha Supra Mandiri, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Greenleaf Global Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Guna Sarana Meditama", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Guoyu Feng Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Hae Cahaya Global, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Haimeili Jaya, CV", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Haleon Indonesia Trading, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Happi Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Harta Cosmo Mestika Indah, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Has Maju Sejahtera, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Hawley & Hazel Distribution Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Hebe Beauty Style, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Hello White Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Herca Cipta Dermal Perdana, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Heros Sagita Fortino, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Hexze Cosmetic Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Hidup Senantiasa Senyum, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Himalaya Wellness Indonesia, PT", negara: "Tiongkok" }, // [cite: 44]
+  { nama: "Hobe Bar Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Huagao Trading International, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Huaho Glorious Innovation, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Hypefast Distribusi Nusantara, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indah Cahaya Group, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indah Mulia Abadi, CV", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indo Chic Trading, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indo Jaya Kosmetik, CV", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indo Online Jaya, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indo Online Pratama, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indo Tama Glory, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indocos Global Trading, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Indotama Sentosa Lestari, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Inow Global Internasional, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Inspirasi Untuk Wanita, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Inti Kreasi Indonesia, CV", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Inti Muda Andalan, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Ivy Beauty Collection, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jakarta Digital Nusantara, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jala Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Java Global Kosmetika, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Javinci Berkat Kreatif Sentosa, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jay Ecommerce Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jaya Indah Abadi Niaga Gemilang, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jaya Rahayu Bahagia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jaysuling Cosmetics Beauty, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "JEC Kosmetik Indo, CV", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jelita Anugerah Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jelita Indah Berseri, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jenny Cosmetics, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jichong Trada Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jimon Group Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "JNR Sosial Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Joint Synergy Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Jowell Group Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kaleido Kosmetik Internasional, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kalimas Mitra Perkasa, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kammacitta Ekspor Impor, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kao Indonesia Distribution, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kapuas Lintas Utama, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Karya Arsa Loka, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kecantikan Permata Indo, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kei Nusantara Persada, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Keva Cosmetics Internasional, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kilau Abadi Sempurna, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kilau Interfarma Sakti, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kilau Pesona Tsaritsa, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Kinara Sinergi Aura, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "KKV International Indonesia, PT", negara: "Tiongkok" }, // [cite: 46]
+  { nama: "Koleksi Jaya, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Komar Cosmetics Technology, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Kosme Pusat Distribusi, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Kreasi Pesona Alami, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Kyo Cipta Kosmetindo Nirmala, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Laif Untuk Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Laleah Kosmetik Indo, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lanbena Trada International, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Laskar Ayu Pertiwi, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lautan Mas Sunardi, CV", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lestari Estetik Indah, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lets Cosmetic Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lets Glow Group International, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lily Kreasi Inovasi, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lime International Trading, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lincorp Indo Nusa, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lintas Mitra Perkasa, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lion Wings, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Livas Wijaya Global, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Liya Cosmetics Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Loe Cantik Kita Cuan, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lola Rose Beauty Trading, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "L'Oreal Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lsy Makmur Sentosa, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Lumi Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Luna Woo Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Luxasia Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "MS Union International, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Mag Niaga Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Mahar Dharma Putri, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Mahkota Indah Internasional, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Maju Kirana Gemilang, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Maklonlab Global, CV", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Makmur Sinar Sejati, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Mandom Indonesia Tbk, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Manggala Sukses Bersama, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "MAP Aktif Adiperkasa Tbk, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "MAQ Indonesia Abadi, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Market America Indonesia Imports, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Marnia International Cosmetik, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Marui Solusindo Atmadja, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Matahari, CV", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Matahari Indonusa, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Matso Sukses Makmur, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Maximus Retail Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "May Sun Yvan, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Maya Cosmetics Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Mazta Farma, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Mega Payung Mas Sakti, PT", negara: "Tiongkok" }, // [cite: 48]
+  { nama: "Meishang Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 48]
+
+  // --- NEGARA: TIONGKOK (BAGIAN 3: 289-438) ---
+  { nama: "Mekar Abadi Sentosa Jaya, CV", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Melional Bintang Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Merita Abadi Sejahtera, CV", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Metoo Beauty International, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "MGI Nusantara Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Miduo Commercial Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mimi Global Asia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Minika Perfekta Mandiri, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Miniso Lifestyle Trading Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Miraigo Teknologi Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mister Wish Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mitra Cantik Alami, CV", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mitra Laras Sukses, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mitra Mas Sentosa, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mitra Selaras Sempurna, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Miya Ecommerce Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mjoptim Indonesia Abadi, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Monica Lestari, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Moseco Cantik Sejahtera, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Muaq Berkah Sejahtera, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Multi Berkat Pratama, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Multi Indocitra Tbk, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Multi Kosmetik Lestari, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Multi Safe Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mumuso Trading Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mustika Indah Sejahtera, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mustika Ratu Tbk, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mustika Satya Nusantara, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mutiara Cantika Bersama, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Mutiara Erly Sejahtera, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "My Everything Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Naga Perkasa Group, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Nagatama Synergy Corp, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Napolopersada Abadi, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Naraay Anugerah Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Narchi Gold Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Natura Deca Kosmetika, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Natura Pesona Mandiri, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Nave Mega Nusantara, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Nayue Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Nayue Skin Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Niaga Warna Persada, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "North West Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Nosredna, CV", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Nu Skin Distribution Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Nurraysa Global Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Ocineid Global Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Office Fashion Indonesia, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Oktagon Inti Pasifik, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Oliken Abadi Jaya, PT", negara: "Tiongkok" }, // [cite: 50]
+  { nama: "Onesmile Distribution Indonesia, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Onix Teknologi Makmur, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Onmouse Trading Group, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Oriflame Cosmetics Indonesia, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Otwoo Cosmetic Indonesia, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Ozzaskin Cantik Muda Alami, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Palm Burnet Rumania, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Panca Talentamas, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Panen Selaras Adiperkasa, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Pangestu Jaya Abadi, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Paragon Technology and Innovation, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Parama Global Inspira, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Pasifik Distribusi Indonesia, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Passportindo Asia Global, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Paten Jaya Abadi, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "PBL Perdagangan International, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Pentanika Warna Indonesia, CV", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Pepper Prime Trading, PT", negara: "Tiongkok" }, // [cite: 51]
+  { nama: "Perdagangan Selera Bumi, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Pesona Gemilang Sejahtera, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Pesona Indah Kosmetik, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Pharmex Global Astrindo, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Phileo Republik Perkasa, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Pink Pick Indonesia, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Pink Wistle Decoration, CV", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "PMY Trada Indonesia, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Premiere Beaute Kosmetik, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Prima Sinergi Internasional, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Priskila Prima Makmur, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Procter & Gamble Home Products Indonesia, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Putikayo International, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Putra Mandiri, CV", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Putri Gemilang Berkarya, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Qianfan Biotechnology International, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Qincai Cosmetic Internasional, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Ravalindo Megah Perkasa, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Relindo Multi Cipta, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Rembaka, PT", negara: "Tiongkok" }, // [cite: 52]
+  { nama: "Remedy Natural Indonesia, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Remimpi Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Royal Pesona Indonesia, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Royal Tata Visindo, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Rui Lang Technology, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Rusen Trading Indonesia, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "S & R, CV", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Sabang Merauke Trading, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Sahabat Perawatan Kulit Optimal, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Sai Indonesia, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Samudera Lindo Group, CV", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Samudera Makmur Jaya, PT", negara: "Tiongkok" }, // [cite: 53]
+  { nama: "Sangpyo Bersinar Indonesia, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Saras Subur Abadi, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Sarua Subur, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Satya Pranata Jaya, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Saudara Ekatama Jaya, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Sekar Estetik Aura, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Sekawan Kosmetik Wasantara, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Selfinc Retail Indonesia, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Semarak Sukha, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Semoga Berkah Sukses Tiga, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Sentra Digimarket, CV", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Senyum Karya Muda, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Sephora Indonesia, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Serendippo Makmur Abadi, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Shanghe Keji Indonesia, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Shangyang Technology Indonesia, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Sheng Fei Rui, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Sheva Jordan Bersama, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Shunda Sejahtera Indonesia, PT", negara: "Tiongkok" }, // [cite: 54]
+  { nama: "Siap Kirim Indonesia, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sinar Gemilang Kosmetik, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sinar Grastesse, CV", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sinar Mulia Kosmetik, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sinar Omega Sejahtera, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sinar Terang Megantara, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sinergi Karisma Indonesia, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sinergia Beaute Indonesia, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sing Foo Cosmetic, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Skin Future Lab Indonesia, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Skin Kosmetika Chandra, CV", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sninety Nine Corp, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Social Bella Indonesia, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sonaf Cosmetic Indonesia, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Spring Letter Indonesia, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Star Mandiri Global, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Suaka Kecantikan Indonesia, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sukses Agung Sentosa, CV", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sumber Ayu Cemerlang, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sumber Kosmetika Indah, PT", negara: "Tiongkok" }, // [cite: 55]
+  { nama: "Sumber Teguh Jaya, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Sumed Jaya Abadi, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Summer Fix Indonesia, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Sunoro Trading Indonesia, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Suntone Wisdom Indonesia, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Super Home Product Indonesia, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Surya Kemenangan Sejahtera, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Swanbella Pesona Makmur Abadi, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Takara Professional Indonesia, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Talent International Indonesia, PT", negara: "Tiongkok" }, // [cite: 56]
+  { nama: "Tan Kosmetika Dunia, PT", negara: "Tiongkok" }, // [cite: 56]
+
+  // --- NEGARA: TIONGKOK (BAGIAN 4: 439-500) ---
+  { nama: "Teguh Pesona, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "The Nail Shoppe, CV", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Thevan Wellknown Trade, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Thriveways Trading Indonesia, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tian Xing Cloud Supply Chain Indonesia, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tiens Indonesia Logistics Trading, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tiga Lab Anugrah, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Timmi Commerce Perdagangan, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tiros Jaya Bersama, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tirta Kumala Sari, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tirta Surya, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tissor Indonesia, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tjhindatama Mulia, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tona Sukses Indonesia, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Top Glow Indonesia, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tosyen Omni Potensi, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Toys Games Indonesia, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Tri Sentosa Abadi, PT", negara: "Tiongkok" }, // [cite: 57]
+  { nama: "Trilestari Indometika Sejati, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Triniti Tunggal Abadi, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Trio Jaya Kosmestika, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Trio Kosmetika Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Trivk Maju Bersama, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Trueve Mitra Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Tuva Global Utama, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Ubeauty Cosmetics Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Ultra Moon Media, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "UMC Media Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Unibio Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Unilever Enterprises Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Unitary Cosmetic Group, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Unza Vitalis, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Uplus Technology Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Urban Beauty Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Vasa Star Indonesia, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Velindo Estetika Kosmetik, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Vendome Aroma Beauty, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Vibrant Glamour Beauty, PT", negara: "Tiongkok" }, // [cite: 58]
+  { nama: "Victoria Care Indonesia Tbk, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Vigor Trading Group, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Vitalveil Investment Indonesia, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Vitamin Organik Indonesia, CV", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Vitapharm, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Vitta Natura Kosmetika, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "VNV Mitra Lestari, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Wahana Putra Akipindo, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Wanfu Glow Indonesia, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Wellz Life Global, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Winida Lestari International, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "Winmax Inovasi Indonesia, PT", negara: "Tiongkok" }, // [cite: 59]
+  { nama: "WNW Indonesia, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Woleco Amenities & Accessories, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Wook Global Technology, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Xianghui Trading Indonesia, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Xiao Yao Teknology, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Xing Jian Maoyi, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Xingchen Cosmetics International Trade, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Yes San International, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Yin Jie International Trading, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Young Vision Kosmetik Indonesia, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Yozzi Jaya Indonesia, PT", negara: "Tiongkok" }, // [cite: 60]
+  { nama: "Yunyi Ecommerce Indonesia, PT", negara: "Tiongkok" } // [cite: 60]
+    ];
+
+    const dataKategori = {
+        "Kosmetik Beresiko Tinggi": ["Sediaan bayi","Sediaan pewarna rambut", "Sediaan perawatan wajah", "Sediaan rias mata dan perawatan sekitar mata", "Sediaan rias wajah (perona pipi)", "Sediaan rias bibir (lip color)", "Sediaan parfum (eau de cologne)", "Sediaan pewarna kuku"],
+        "Kosmetik dengan riwayat Tidak Memenuhi Syarat": ["Sediaan untuk alis (pensil alis)", "Eye shadow", "Eye liner", "Blush on", "Bedak padat/ compact powder", "Pembersih kulit muka", "Mascara", "Eye Make Up Remover", "Penyegar kulit muka/toner", "Lip colour, Lip liner, Lip glos, Lip care", "Pewarna kuku", "Sediaan parfum (eau de cologne)", "Krim pencerah/Skin lightener", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "krim siang", "krim malam", "Sediaan tabir surya"],
+        "Kosmetik yang disampling secara mandiri oleh UPT": ["Kosmetik yang diproduksi negara Filipina", "Kosmetik Prioritas", "Kosmetik kasus khusus (Wasprod)", "Mainan berkosmetik", "Kosmetik yang diproduksi negara Thailand","sediaan untuk kulit berjerawat"],
+        "Kosmetik yang diproduksi negara Tiongkok": ["Krim malam", "Krim Siang/ Day Cream", "Masker Wajah", "Bedak padat/ compact powder", "Eye Make Up Remover", "Lip colour, Lip liner, Lip glos, Lip care", "Mascara", "Pelembab/ Moisturiser", "Pembersih Kulit Muka", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "lipstik"],
+        "Kosmetik yang dibuat berdasarkan kontrak produksi": ["Day Cream", "Night Cream", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "Sediaan tabir surya", "Skin aging product", "Pembersih kulit muka", "Penyegar kulit muka/toner", "Pelembab/ Moisturiser", "Krim pencerah/Skin lightener"],
+        "Kosmetik yang dibuat berdasarkan kuasa merek": ["Day Cream", "Night Cream", "Perawatan Kulit Badan Tangan/ Hand Body Lotion", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "Pembersih kulit muka", "Penyegar kulit muka/toner", "Pelembab/ Moisturiser", "Lip colour, Lip liner, Lip glos, Lip care", "Bedak padat/ compact powder", "Bedak wajah", "Hair Body wash", "Baby Hair Body wash"],
+        "Kosmetik menengah ke bawah": ["Krim malam","Krim siang", "Bedak padat/ compact powder", "Pembersih kulit muka", "Lem bulu mata", "Eye Make Up Remover", "Penyegar kulit muka/toner", "Lip colour, Lip liner, Lip glos, Lip care", "Pembersih pewarna kuku/ Nail polish remover", "Perawatan Kulit Badan Tangan/ Hand Body Lotion", "External Intimate Hygiene", "Pelembab/ Moisturiser", "Astringent", "Deodoran / Antiperspiran", "Pembersih Rambut dan Badan/ Hair and Body Wash", "Sediaan untuk kulit berjerawat", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume"],
+        "Kosmetik dengan klaim komposisi bahan tertentu": ["Baby cream", "sediaan bayi lainnya", "sediaan tabir surya", "-"],
+        "Kosmetik yang diduga mengandung DNA porcine": ["pelembam/moisturizer"],
+        "Kosmetik viral": ["Lip colour, Lip liner, Lip glos, Lip care", "Skin aging product", "Day Cream", "Night Cream", "Pelembab/ Moisturiser"],
+        "Kosmetik di online official store/reseller": ["Lip colour, Lip liner, Lip glos, Lip care", "Skin aging product", "Day Cream", "Night Cream", "Pelembab/ Moisturiser"]
+
+    };
+// database-sampling.js
+
+// ... (data lain yang mungkin sudah ada di sini, misal dataTMK atau dataKategori) ...
+
 const daftarBahanHewani = [
-  { nama: "Allantoin", deskripsi: "Asam urat dari sapi, sebagian besar mamalia. Juga terdapat di banyak tanaman." },
-  { nama: "Arachidonic Acid", deskripsi: "Asam lemak tak jenuh cair yang ditemukan di hati, otak, kelenjar, serta lemak hewan dan manusia." },
-  { nama: "Bee Pollen", deskripsi: "Lilin yang dimurnikan dari sarang lebah Apis mellifera." },
-  { nama: "Biotin", deskripsi: "Terdapat di setiap sel hidup dan dalam jumlah yang lebih besar pada susu dan ragi." },
-  { nama: "Casein", deskripsi: "Kombinasi kompleks yang diproduksi di jaringan kelenjar susu dari asam amino yang disuplai oleh darah. Bisa didapatkan dari susu kedelai." },
-  { nama: "Leukocyte", deskripsi: "Sel darah putih." },
-  { nama: "Serum albumin", deskripsi: "Albumin, serum darah." },
-  { nama: "Gelatin, arginine", deskripsi: "Kombinasi protein kompleks yang diperoleh melalui hidrolisis kolagen dengan cara merebus kulit, tendon, ligamen, tulang, dan lain-lain." },
-  { nama: "Carmine (CI 75470)", deskripsi: "Pigmen merah dari serangga cochineal betina yang dihancurkan." },
-  { nama: "Cerebrosides", deskripsi: "Sfingolipid yang diisolasi dari otak dan sistem saraf pusat hewan. Catatan: Cerebrosides termasuk bahan yang dilarang di Eropa (Annex II/419)." },
-  { nama: "Cholesterol", deskripsi: "Alkohol steroid yang terdapat di semua lemak dan minyak hewani, jaringan saraf, kuning telur, dan darah." },
-  { nama: "Collagen", deskripsi: "Protein berserat yang mencakup sepertiga dari total protein." },
-  { nama: "Elastin", deskripsi: "Protein tidak larut yang diekstraksi dari organisme mamalia." },
-  { nama: "Hyaluronic Acid", deskripsi: "Jika berasal dari hewan, protein ini ditemukan di tali pusat dan cairan di sekitar sendi. Dapat juga bersumber dari tanaman atau sintetis." },
-  { nama: "Keratins", deskripsi: "Protein berserat alami yang terdapat pada vertebrata." },
-  { nama: "Lactic Acid", deskripsi: "Biasanya berasal dari tanaman seperti bit. Jika berasal dari hewan, ditemukan dalam darah dan jaringan otot." },
-  { nama: "Lactose", deskripsi: "Gula susu dari susu mamalia." },
-  { nama: "Lanolin", deskripsi: "Turunan murni dari sekresi kelenjar sebasea (lemak kulit) domba yang menyerupai lemak." },
-  { nama: "Embryo Extract", deskripsi: "Ekstrak yang diperoleh dari kulit embrio mamalia." },
-  { nama: "Lecithin", deskripsi: "Zat lilin dalam jaringan saraf semua organisme hidup. Untuk komersial: telur/kedelai. Juga dari darah, susu, jagung, atau sintetis." },
-  { nama: "Lipase", deskripsi: "Enzim dari lambung dan kelenjar lidah anak sapi, anak kambing, dan anak domba." },
-  { nama: "Methionine", deskripsi: "Asam amino esensial yang ditemukan dalam berbagai protein (biasanya dari albumin telur dan kasein). Dapat juga dibuat secara sintetis." },
-  { nama: "Milk Protein", deskripsi: "Campuran protein yang diperoleh dari susu sapi." },
-  { nama: "Glycerides", deskripsi: "Dari lemak hewani atau nabati." },
-  { nama: "Mink Oil", deskripsi: "Jaringan lemak sub-dermal (di bawah kulit) cerpelai." },
-  { nama: "Oleic Acid", deskripsi: "Diperoleh dari berbagai lemak dan minyak hewani serta nabati." },
-  { nama: "Nucleic Acid", deskripsi: "Terdapat dalam inti semua sel hidup, juga dapat diperoleh dari tanaman." },
-  { nama: "Placenta", deskripsi: "Plasenta mamalia." },
-  { nama: "Myristic Acid", deskripsi: "Asam organik yang biasanya berasal dari minyak kacang-kacangan, tetapi kadang-kadang berasal dari hewan." },
-  { nama: "Stearic Acid", deskripsi: "Asam lemak dari hewan atau tanaman." },
-  { nama: "Tyrosine", deskripsi: "Asam amino yang sering berasal dari tanaman atau sintetis, tetapi terkadang dihidrolisis dari kasein (susu)." },
-  { nama: "Colostrum", deskripsi: "Cairan yang disekresikan oleh kelenjar susu setelah kelahiran hewan." },
-  { nama: "Glycosphingolipid", deskripsi: "Sfingolipid." },
-  { nama: "Soluble Proteoglycan", deskripsi: "Glikoprotein sapi yang larut." },
-  { nama: "Placental Protein", deskripsi: "Zat ekstraktif yang diperoleh dari plasenta mamalia." }
+    { nama: "Allantoin", deskripsi: "Asam urat dari sapi, sebagian besar mamalia. Juga terdapat di banyak tanaman." },
+    { nama: "Arachidonic Acid", deskripsi: "Asam lemak tak jenuh cair yang ditemukan di hati, otak, kelenjar, serta lemak hewan dan manusia." },
+    { nama: "Bee Pollen", deskripsi: "Lilin yang dimurnikan dari sarang lebah Apis mellifera." },
+    { nama: "Biotin", deskripsi: "Terdapat di setiap sel hidup dan dalam jumlah yang lebih besar pada susu dan ragi." },
+    { nama: "Casein", deskripsi: "Kombinasi kompleks yang diproduksi di jaringan kelenjar susu dari asam amino yang disuplai oleh darah. Bisa didapatkan dari susu kedelai." },
+    { nama: "Leukocyte", deskripsi: "Sel darah putih." },
+    { nama: "Serum albumin", deskripsi: "Albumin, serum darah." },
+    { nama: "Gelatin, arginine", deskripsi: "Kombinasi protein kompleks yang diperoleh melalui hidrolisis kolagen dengan cara merebus kulit, tendon, ligamen, tulang, dan lain-lain." },
+    { nama: "Carmine (CI 75470)", deskripsi: "Pigmen merah dari serangga cochineal betina yang dihancurkan." },
+    { nama: "Cerebrosides", deskripsi: "Sfingolipid yang diisolasi dari otak dan sistem saraf pusat hewan. Catatan: Cerebrosides termasuk bahan yang dilarang di Eropa (Annex II/419)." },
+    { nama: "Cholesterol", deskripsi: "Alkohol steroid yang terdapat di semua lemak dan minyak hewani, jaringan saraf, kuning telur, dan darah." },
+    { nama: "Collagen", deskripsi: "Protein berserat yang mencakup sepertiga dari total protein." },
+    { nama: "Elastin", deskripsi: "Protein tidak larut yang diekstraksi dari organisme mamalia." },
+    { nama: "Hyaluronic Acid", deskripsi: "Jika berasal dari hewan, protein ini ditemukan di tali pusat dan cairan di sekitar sendi. Dapat juga bersumber dari tanaman atau sintetis." },
+    { nama: "Keratins", deskripsi: "Protein berserat alami yang terdapat pada vertebrata." },
+    { nama: "Lactic Acid", deskripsi: "Biasanya berasal dari tanaman seperti bit. Jika berasal dari hewan, ditemukan dalam darah dan jaringan otot." },
+    { nama: "Lactose", deskripsi: "Gula susu dari susu mamalia." },
+    { nama: "Lanolin", deskripsi: "Turunan murni dari sekresi kelenjar sebasea (lemak kulit) domba yang menyerupai lemak." },
+    { nama: "Embryo Extract", deskripsi: "Ekstrak yang diperoleh dari kulit embrio mamalia." },
+    { nama: "Lecithin", deskripsi: "Zat lilin dalam jaringan saraf semua organisme hidup. Untuk komersial: telur/kedelai. Juga dari darah, susu, jagung, atau sintetis." },
+    { nama: "Lipase", deskripsi: "Enzim dari lambung dan kelenjar lidah anak sapi, anak kambing, dan anak lamb." },
+    { nama: "Methionine", deskripsi: "Asam amino esensial yang ditemukan dalam berbagai protein (biasanya dari albumin telur dan kasein). Dapat juga dibuat secara sintetis." },
+    { nama: "Milk Protein", deskripsi: "Campuran protein yang diperoleh dari susu sapi." },
+    { nama: "Glycerides", deskripsi: "Dari lemak hewani atau nabati." },
+    { nama: "Mink Oil", deskripsi: "Jaringan lemak sub-dermal (di bawah kulit) cerpelai." },
+    { nama: "Oleic Acid", deskripsi: "Diperoleh dari berbagai lemak dan minyak hewani serta nabati." },
+    { nama: "Nucleic Acid", deskripsi: "Terdapat dalam inti semua sel hidup, juga dapat diperoleh dari tanaman." },
+    { nama: "Placenta", deskripsi: "Plasenta mamalia." },
+    { nama: "Myristic Acid", deskripsi: "Asam organik yang biasanya berasal dari minyak kacang-kacangan, tetapi kadang-kadang berasal dari hewan." },
+    { nama: "Stearic Acid", deskripsi: "Asam lemak dari hewan atau tanaman." },
+    { nama: "Tyrosine", deskripsi: "Asam amino yang sering berasal dari tanaman atau sintetis, tetapi terkadang dihidrolisis dari kasein (susu)." },
+    { nama: "Colostrum", deskripsi: "Cairan yang disekresikan oleh kelenjar susu setelah kelahiran hewan." },
+    { nama: "Glycosphingolipid", deskripsi: "Sfingolipid." },
+    { nama: "Soluble Proteoglycan", deskripsi: "Glikoprotein sapi yang larut." },
+    { nama: "Placental Protein", deskripsi: "Zat ekstraktif yang diperoleh dari plasenta mamalia." }
 ];
 
-// ======================================================
-// DATA SUB-SUB KATEGORI
-// ======================================================
+// Tambahkan ini di bagian bawah file database-sampling.js
 window.dataSubSubKategori = {
-  "Sediaan bayi": ["baby oil", "baby lotion", "baby cream"],
-  "Sediaan perawatan wajah": ["krim siang", "krim malam", "Pelembab/ Moisturiser"],
-  "Sediaan rias mata dan perawatan sekitar mata": ["eye shadow", "sediaan untuk alis (pensil alis)", "maskara"],
-  "Kosmetik yang diproduksi negara Thailand": [
-    "Krim malam",
-    "shampoo",
-    "Conditioner",
-    "Krim Siang/ Day Cream",
-    "Masker Wajah",
-    "Bedak padat/ compact powder",
-    "Eye Make Up Remover",
-    "Lip colour, Lip liner, Lip glos, Lip care",
-    "Mascara",
-    "Pelembab/ Moisturiser",
-    "Pembersih Kulit Muka",
-    "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume",
-    "lipstik",
-    "Cairan Cukur / Pra Cukur / Pasca Cukur"
-  ],
-  "Kosmetik yang diproduksi negara Filipina": ["Sabun Mandi Padat"],
-  "Kosmetik Prioritas": [
-    "Kosmetik TL (kasus UPT mandiri)",
-    "Kosmetik mudah terurai",
-    "Kosmetik sesuai peredaran (Eau de Cologne)"
-  ]
+    // Kunci (Key) harus sama persis dengan teks Nama Sub Kategori yang ada di dropdown kedua
+    "Sediaan bayi": [
+        "baby oil", 
+        "baby lotion", 
+        "baby cream"
+    ],
+    "Sediaan perawatan wajah": [
+        "krim siang", 
+        "krim malam", 
+        "Pelembab/ Moisturiser"
+    ],
+    "Sediaan rias mata dan perawatan sekitar mata": [
+        "eye shadow", 
+        "sediaan untuk alis (pensil alis)", 
+        "maskara"
+    ],
+ "Kosmetik yang diproduksi negara Thailand": ["Krim malam","shampoo","Conditioner", "Krim Siang/ Day Cream", "Masker Wajah", "Bedak padat/ compact powder", "Eye Make Up Remover", "Lip colour, Lip liner, Lip glos, Lip care", "Mascara", "Pelembab/ Moisturiser", "Pembersih Kulit Muka", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "lipstik", "Cairan Cukur / Pra Cukur / Pasca Cukur"],
+
+ "Kosmetik yang diproduksi negara Filipina": ["Sabun Mandi Padat"],
+
+"Kosmetik Prioritas": ["Kosmetik TL (kasus UPT mandiri)","Kosmetik mudah terurai","Kosmetik  sesuai peredaran (Eau de Cologne)"]
+
+
+    // Silakan teruskan pola ini untuk sub-kategori lainnya...
 };
-
-// ======================================================
-// DATA PRODUK (Sudah dibersihkan dari duplikat exact)
-// Total: 150+ entri unik
-// ======================================================
-const dataProduk = [
-  { nama: "Clear Shine Facial Foam", nie: "NA18171206660" },
-  { nama: "Dazzle Me Niacinamide-Txa Milky Cleanser", nie: "NA11251201493" },
-  { nama: "Hy! Amino+ 2% Niacinamide Brightening Gentle Cleanser", nie: "NA11251201412" },
-  { nama: "Ultimate Bright Replenishing Night Cream", nie: "NA18210109098" },
-  { nama: "Cicamide Facial Cleanser", nie: "NA11221200558" },
-  { nama: "Glad2Glow Facial Wash Milk Amino Acids Brightening Cleanser", nie: "NA11241200626" },
-  { nama: "Ink-Vinyl Lip Lacquer 008 Magic-Ink", nie: "NA11251300009" },
-  { nama: "Implora Urban Lip Cream Matte 01 Dusty Nude", nie: "NA1891307552" },
-  { nama: "Implora Nail Polish 1 RED (21)", nie: "NA11201500112" },
-  { nama: "Ink-Vinyl Lip Lacquer 233 Magic-Ink", nie: "NA11251300011" },
-  { nama: "Hanasui Tintdorable Lip Stain 01 Cherry", nie: "NA18211301010" },
-  { nama: "Purbasari HI-MATTE Lip Cream 01 Vinca", nie: "NA18221300923" },
-  { nama: "Purbasari HI-MATTE Lip Cream 02 Azalea", nie: "NA18221300924" },
-  { nama: "Implora Nail polish RED 3 RED ( 15)", nie: "NA11201500113" },
-  { nama: "Implora urban Lipcream matte 16 Dusty Peach", nie: "NA18221300071" },
-  { nama: "Implora Urban Lipcream matte 20 Red Gala", nie: "NA18221300075" },
-  { nama: "Extrait De Parfum Tuberose Dusk", nie: "NA18250605532" },
-  { nama: "Single Glow Eau de Parfum", nie: "NA18240603061" },
-  { nama: "Kulits Nail Polish Remover", nie: "NA18241500189" },
-  { nama: "X Indofragz Cloud Mist - Traumerei", nie: "NA18250600505" },
-  { nama: "Matcha Latte Extrait de Parfum", nie: "NA18240607549" },
-  { nama: "Mexicola Perfume", nie: "NA18210601055" },
-  { nama: "01 Powder Room Eau De Parfum", nie: "NA18220600670" },
-  { nama: "Gourmand Vibes", nie: "NA18240600502" },
-  { nama: "Moroccan Sunset", nie: "NA18220601494" },
-  { nama: "Pinkberry Twinkle Eau de parfum", nie: "NA18200601391" },
-  { nama: "EDP Wild Blush", nie: "NA18220600549" },
-  { nama: "Wonderland Garden Series Women's Perfume White Peony", nie: "NA11240600289" },
-  { nama: "Hitea Women's Perfume Pistachio Ash", nie: "NA11250600057" },
-  { nama: "Pick Century White Soul Nice Day Body Spray", nie: "NA112506600206" },
-  { nama: "Body Fragrance French Vanilla", nie: "NA18230602695" },
-  { nama: "Crush On You Fine Fragrance Mist", nie: "NA18240609265" },
-  { nama: "Cupid Love Perfume", nie: "NA18230606461" },
-  { nama: "Into Foggy Day", nie: "NA18230601753" },
-  { nama: "HMNS X Tsana ELEA Fragrance Mist", nie: "NA18220603959" },
-  { nama: "Garden of Mirror", nie: "NA18240601279" },
-  { nama: "Love Journey Fine Fragrance Mist", nie: "NA18240609265" },
-  { nama: "Velvet Rose", nie: "NA18230602692" },
-  { nama: "Body Fragrance Jasmine Blossoms", nie: "NA18230602772" },
-  { nama: "Brightening Body Lotion With UV A + UV B Protection Cherry Forest", nie: "NA18220108974" },
-  { nama: "Fresh Jade Perfumed Body Lotion", nie: "NA18240118412" },
-  { nama: "Wardah EyeXpert eye & lip makeup remover", nie: "NA18231208334" },
-  { nama: "Viva Hand & Body Lotion Mangir", nie: "NA18120100647" },
-  { nama: "Azarine Pure Radiance Barrier Moisturizer", nie: "NA18230102264" },
-  { nama: "Viva Eye & Lip MAKEUP REMOVER Cleansing water", nie: "NA18121202050" },
-  { nama: "Viva UV-Hya Bright Body Lotion Happy Berry", nie: "NA18230114908" },
-  { nama: "La Tulipe EYE MAKE UP REMOVER", nie: "NA18181200399" },
-  { nama: "VIVA QUEEN Perfect Cleanse Makeup Remover", nie: "NA18151205645" },
-  { nama: "Maybelline Eye+Lip Makeup Remover", nie: "NA11151204949" },
-  { nama: "2 in 1 Facial Lotion Perfect Luminous Yambean Extract", nie: "NA18231200038" },
-  { nama: "SEGER SNOW MOISTURIZER CREAM", nie: "NA18140103678" },
-  { nama: "SEGER & CO 2 ANTING", nie: "NA18200105323" },
-  { nama: "Deep Wash", nie: "NA18241204370" },
-  { nama: "Purbasari Scrub Facial Wash", nie: "NA18241205787" },
-  { nama: "AHAcne Cleanser", nie: "NA18221207485" },
-  { nama: "Kelly Lemon Soap", nie: "NA18111201159" },
-  { nama: "Centella Ceramide Soothing Toner", nie: "NA11231201142" },
-  { nama: "Pomegranate Niacinamide Brightening Moisturizer", nie: "NA11250100577" },
-  { nama: "Ceraluronic Essence Toner", nie: "NA11221200557" },
-  { nama: "Brightening Moisturizer", nie: "NA11230100422" },
-  { nama: "Bright Stuff Face Toner", nie: "NA18231203643" },
-  { nama: "Bright Miracle Facial Foam", nie: "NA18231202584" },
-  { nama: "Facial Foam - Acne Skin", nie: "NA18191232436" },
-  { nama: "Luminous White Whitening Facial Foam", nie: "NA18171204939" },
-  { nama: "Foaming Face Wash", nie: "NA18241206139" },
-  { nama: "Moist Cream", nie: "NA18130101828" },
-  { nama: "TXA Brightening Moisturizer", nie: "NA18240118807" },
-  { nama: "Ceramide Probiotics Moisturizer Gel", nie: "NA18230106332" },
-  { nama: "Happy Cocoa Hydrating Body Lotion", nie: "NA18230112535" },
-  { nama: "Perfect Vita C Bright Glow Moisturizer", nie: "NA11250100260" },
-  { nama: "Creamy Berry Overnight Bright Body Serum", nie: "NA11241900104" },
-  { nama: "EAU DE PARFUM PREMIERE", nie: "NA18200601068" },
-  { nama: "Tropical Velvet Moist & Smooth Body Serum", nie: "NA11240100773" },
-  { nama: "Age Miracle Ultimate Youth Night Cream", nie: "NA18230103549" },
-  { nama: "Eternal Faith Lady Perfume", nie: "NA11210600061" },
-  { nama: "Eternal Faith Men Perfume", nie: "NA11220600090" },
-  { nama: "Age Miracle Ultimate Youth Day Cream", nie: "NA18230102509" },
-  { nama: "HIKARI EAU DE PARFUM", nie: "NA18250601873" },
-  { nama: "Cinnamoroll Moisturizing Hand Cream", nie: "NA11230100389" },
-  { nama: "Biokos Age Renew Anti Wrinkle Day Cream", nie: "NA18200103291" },
-  { nama: "Deep Cleansing Charcoal Face Wash", nie: "NA52231200001" },
-  { nama: "Hy! Amino+ 1.5% BHA Fight Acne Gel Cleanser", nie: "NA11251201391" },
-  { nama: "Age Renew Anti Wrinkle Night Cream", nie: "NA18180100565" },
-  { nama: "Age Defy Renewal Night Cream", nie: "NA32230100030" },
-  { nama: "Ultimate Bright Illuminating Day Cream", nie: "NA18210109096" },
-  { nama: "Glad2Glow Double Bright Day Cream", nie: "NA11250100327" },
-  { nama: "Hand & Body Lotion Sexy", nie: "NA18120101349" },
-  { nama: "Liquid Facial Wash", nie: "NA18191205423" },
-  { nama: "Ponds Clear Solution Make Up Remover", nie: "NA18201204297" },
-  { nama: "PIXY EYE & LIP MAKEUP REMOVER", nie: "NA18241205354" },
-  { nama: "Herborist Body Serum dengan Raspberry & Tomato extracts", nie: "NA18220101385" },
-  { nama: "Micellar Water Sakura White", nie: "NA18231202950" },
-  { nama: "Sabun Susu & Avocado", nie: "NA18160500564" },
-  { nama: "SMOOTH TONER", nie: "NA18201205042" },
-  { nama: "Natural H2O Micellar Cleansing Water Acne Care", nie: "NA18211208691" },
-  { nama: "Apple Fuji Soap", nie: "NA18160500575" },
-  { nama: "Skin Lightening Soap With Hydromoist", nie: "NA40200500001" },
-  { nama: "Micellar Water All-in-1 Cleanser with Chamomile Extract, Niacinamide B3, Pro-Vit B5", nie: "NA18201203192" },
-  { nama: "BOTANICALS CAMELLIA BRIGHT", nie: "NA18220500527" },
-  { nama: "AcnePlus 5X Acid Toner", nie: "NA11241201776" },
-  { nama: "Dream White", nie: "NA40130500452" },
-  { nama: "FRESH GLOW", nie: "NA18220500520" },
-  { nama: "Perfumed Soap Green Mirage", nie: "NA18230500110" },
-  { nama: "Cussons Imperial Leather", nie: "NA18230500763" },
-  { nama: "Perfect Vita C Bright Glow Toner", nie: "NA11251200672" },
-  { nama: "Hijab Bar Soap Rose Water & Argan Oil", nie: "NA18210500837" },
-  { nama: "MICELLAR WATER LUMINOUS BRIGHT", nie: "NA18231205707" },
-  { nama: "LIP & EYE WATERPROOF MAKEUP REMOVER with microbiome", nie: "NA18231209043" },
-  { nama: "Gluta Collagen Soap With Extract Chocolate", nie: "NA18200500942" },
-  { nama: "Low pH Gentle Jelly Cleanser", nie: "NA18211200050" },
-  { nama: "Let It Glow Hand Cream", nie: "NA11240100388" },
-  { nama: "Gluta Collagen Soap With Milk", nie: "NA18200500941" },
-  { nama: "The Originote CICA-B5 Shooting Essence Toner", nie: "NA11231201478" },
-  { nama: "Moisturizing Vegetable Soap Garden Flower ( White )", nie: "NA18240501004" },
-  { nama: "Coffee Scrub Soap", nie: "NA18240500647" },
-  { nama: "Keep It Chill Hand Cream", nie: "NA11240100391" },
-  { nama: "The Originote H-LLOW Clarifying Toner", nie: "NA11221200556" },
-  { nama: "Natural Flower and Wood Fragrances Beauty Soap Lys de France", nie: "NA18240501002" },
-  { nama: "Scarlet Intense Brightening AHA Body Serum", nie: "NA18240106997" },
-  { nama: "Glad2Glow Moist and Smooth Body Serum Tropical Velvet", nie: "NA11240100773" },
-  { nama: "Hanasui Acne Expert", nie: "NA18241204595" },
-  { nama: "Somethinc Cleanser Low pH Gentle Jelly", nie: "NA182112000050" },
-  { nama: "Lavojoy Let It Glow Body Serum Skin Brightening", nie: "NA11230100296" },
-  { nama: "Yessica's Cleansing Masque with Strawberry", nie: "NA18230200288" },
-  { nama: "Dear Me Beauty Skin Barrier Face Gel Cleanser", nie: "NA18211206182" },
-  { nama: "Glad2Glow Removes make up & Comfort", nie: "NA11241200946" },
-  { nama: "Skintific Mugwort", nie: "NA11231201019" },
-  { nama: "Glad2Glow Overnight Bright Body Serum Creamy Berry", nie: "NA11241900104" },
-  { nama: "Yessica's Camellia Amino Acid Brightening Cleansing Foam", nie: "NA18231209295" },
-  { nama: "Natural Bright Face Wash", nie: "NA18161203102" },
-  { nama: "ACNE TONER (Mugwort)", nie: "NA18221205550" },
-  { nama: "Bright Complete Vitamin C Super Whip", nie: "NA18231211517" },
-  { nama: "Hair Color (C) WR8 Wine Red", nie: "NKIT220001912" },
-  { nama: "Silk Touch Cream Color (A) 5V Mystic Violet", nie: "NKIT200000452" },
-  { nama: "Brightening Face Toner (+HA10)", nie: "NA18221205551" },
-  { nama: "Dark Spot Turmeric Face Wash", nie: "NA18241203353" },
-  { nama: "Natural Glow Rose Face Wash", nie: "NA17231200028" },
-  { nama: "FRAGRANCE BRIGHTENING BODY LOTION FRESHY", nie: "NA18210105828" },
-  { nama: "Salicylic acid Toning Makeup Remover", nie: "NA11231200972" },
-  { nama: "Rose Micellar Water", nie: "NA18241204227" },
-  { nama: "Moisturizing and Clear Dual Phase Eye and Lip Remover-Blue (for oily skin)", nie: "NA11241200804" },
-  { nama: "natur-e Advanced Age-Rejuve & Glow Anti-Aging Hand & Body Serum", nie: "NA18240101397" },
-  { nama: "Purifying All in One Makeup Remover", nie: "NA11241200803" },
-  { nama: "Treatment Hair Dye Natural Black b", nie: "NKIT230002401" },
-  { nama: "NYU Creme Hair Colour Burgundy 5.62", nie: "NIKT250000654" },
-  { nama: "All in One Face Cleanser with Mulberry", nie: "NA18211205528" },
-  { nama: "Color Naturals Ultra Color Radiant Blueberry", nie: "NKIT230001749" },
-  { nama: "Professional Hair Colorant Color Vibe Series S-4.41 Chocolate Brown", nie: "NKIT230002571" },
-  { nama: "Viva Milk Cleanser Spirulina", nie: "NA18121201649" },
-  { nama: "Glow & Lovely Derma Glow Facial Foam", nie: "NA18231207469" },
-  { nama: "Safi Hydra Glow Hydrating Water Cleanser", nie: "NA32231200027" },
-  { nama: "Safi White Natural Brightening Cleanser", nie: "NA32241200018" },
-  { nama: "Skintific Glycolic Acid Daily Clarifying Toner", nie: "NA11231201198" },
-  { nama: "Viva Eye and Lip Makeup Remover", nie: "NA18121202050" },
-  { nama: "Glad2Glow Pomegranate Niacinamide Brightening Toner", nie: "NA11241200207" },
-  { nama: "Viva Milk Cleanser", nie: "NA18121201348" },
-  { nama: "Emina Bright Stuff Niacinamide Oxy Ceramide", nie: "NA18251201199" },
-  { nama: "OMG Face Wash Bright Booster", nie: "NA18241205075" },
-  { nama: "Mawar Moisturizer", nie: "NA18210107356" },
-  { nama: "Glow Ready Two Way Cake SPF 20 PA++ - Light Ivory", nie: "NA18201200408" },
-  { nama: "Pink 4 Colors Eyeshadow E0459#1", nie: "NA11231201413" },
-  { nama: "Eyeshadow E0949#1", nie: "NA11241200702" },
-  { nama: "Pink 4 Colors Eyeshadow E0459#4", nie: "NA11231201458" },
-  { nama: "Lashtension Enhancing Fiber Mascara", nie: "NA11241200227" },
-  { nama: "Anti-Drop Mascara", nie: "NA11231200977" },
-  { nama: "Better Butter Lip Treatment - Yes Peach", nie: "NA11241300541" },
-  { nama: "Rose All Day Thunder Lash Hyper-Length Mascara", nie: "NA18241201270" },
-  { nama: "Nail Polish Remover", nie: "NA18191505011" },
-  { nama: "Eyelash Adhesive", nie: "NA18201201770" },
-  { nama: "Matte Me Yours 05", nie: "NA11231300466" },
-  { nama: "OILPROOF CURL MASCARA PF-E08 02", nie: "NA11241200143" },
-  { nama: "Nail Polish Remover Acetone Free", nie: "NA18211500035" },
-  { nama: "Day To Day Dewy Tint 02 Bliss", nie: "NA18241301062" },
-  { nama: "Lipstick 2", nie: "NA18131301481" },
-  { nama: "21 Lipstick 500", nie: "NA18121302560" },
-  { nama: "Cheek Blossom Blush On Sweet Salmon", nie: "NA18201201818" },
-  { nama: "Glossy Stain 01 Autumn Bell", nie: "NA18201300381" },
-  { nama: "MINERAL BOTANICA First Defense+Brightening Facial Foam With Kojic Acid And Niacinamide", nie: "NA18221206315" },
-  { nama: "LIP CRAYON SATIN CURIOUS", nie: "NA18211300450" },
-  { nama: "Lipstick 1", nie: "NA18131301494" },
-  { nama: "Facial Wash Papaya", nie: "NA18251200854" },
-  { nama: "3000 Rouge A Levres Lipstick 151", nie: "NA18121302374" },
-  { nama: "Darkspot Series Facial Wash", nie: "NA18241204070" },
-  { nama: "LIP VELVET 06 CHERRY POP AZZURA", nie: "NA18241301799" },
-  { nama: "Perfect Purifying Facial Foam With Centella Asiatica Extract and Niacinamide", nie: "NA18221205838" },
-  { nama: "MATTEDORABLE LIP CREAM BROWN SUGAR", nie: "NA18211300984" },
-  { nama: "Acne Gentle Facial Cleanser", nie: "NA18231209050" },
-  { nama: "Lip Cream Mild Peach", nie: "NA18171302204" },
-  { nama: "Lipstick Colorfix No.8 New", nie: "NA18241302148" },
-  { nama: "Lip Mousse Pink Peony", nie: "NA18201301783" },
-  { nama: "21 Lipstick 900", nie: "NA18131301421" },
-  { nama: "Mattelast Lip Cream 13 Latte OMG OH MY GLAM", nie: "NA18231302801" },
-  { nama: "Blush On 02", nie: "NA11191206446" },
-  { nama: "LIP VELVET 02 PUMPKIN SPICE AZZURA", nie: "NA18241301798" },
-  { nama: "Eye Shadow 12 Colors - 02", nie: "NA11211200021" },
-  { nama: "IMPLORA URBAN Afterglam Eyeshadow Palette", nie: "NA18241207832" },
-  { nama: "Urban Volume Mascara", nie: "NA11241200962" },
-  { nama: "Eye Shadow Cream Hitam", nie: "NA18111202582" },
-  { nama: "Eyedorable Mascara", nie: "NA11221200403" },
-  { nama: "Perfect Cleanse Make Up Remover", nie: "NA18151205645" },
-  { nama: "Volume & Curl Mascara Black", nie: "NA18191233695" },
-  { nama: "Mascara Black", nie: "NA11191205475" },
-  { nama: "Netizen Mascara 01", nie: "NA11211200638" },
-  { nama: "WATERPROOF MAKE UP REMOVER + COLLAGEN WATER", nie: "NA18211204764" },
-  { nama: "Waterproof Mascara Black B", nie: "NA18171203089" },
-  { nama: "OILPROOF CURL MASCARA PF-E08 01", nie: "NA11241200142" },
-  { nama: "Glow Ready Two Way Cake SPF 20 PA++ - Natural Beige", nie: "NA18201200410" },
-  { nama: "Milk Cleanser Bengkuang", nie: "NA18121201346" },
-  { nama: "Milk Cleanser Green Tea", nie: "NA18121201371" },
-  { nama: "Milk Cleanser Lemon", nie: "NA18121201347" },
-  { nama: "Nail Polish Remover", nie: "NA18141500445" },
-  { nama: "Cheek Blossom Blush On Pink Candy", nie: "NA18201200461" },
-  { nama: "Fin Touch 4", nie: "NA18131202800" },
-  { nama: "Roll to Volume Mascara", nie: "NA11221200726" },
-  { nama: "Milk Cleanser Mawar", nie: "NA18241211038" },
-  { nama: "Roll to High Mascara", nie: "NA11241200239" },
-  { nama: "Cheek Blossom Blush On Coral Peach", nie: "NA18201200462" }
-];
-
-// ======================================================
-// EXPOSE KE GLOBAL WINDOW (untuk akses di HTML)
-// ======================================================
-window.dataTMK = dataTMK;
-window.databasePenotif = databasePenotif;
-window.dataKategori = dataKategori;
-window.dataProduk = dataProduk;
-window.daftarBahanHewani = daftarBahanHewani;
-window.dataSubSubKategori = dataSubSubKategori;

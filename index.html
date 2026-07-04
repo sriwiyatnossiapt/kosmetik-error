@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renlak Kosmetik 2026</title>
-  <!-- Tambahkan baris ini untuk PWA -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#2563eb">
-  <link rel="apple-touch-icon" href="icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -212,16 +208,13 @@ label {
     .sidebar { left: -280px; }
     .sidebar.show { left: 0; }
 }
-#hasilCariProduk .list-group-item:hover {
-    background-color: #e0f2fe;
-}
     </style>
 </head>
 <body>
 <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
 <div class="sidebar" id="sidebar">
     <div class="p-4 mb-3">
-        <h4 class="fw-bold text-dark mb-0">Kosmetik: Informasi & Sistem Sampling </h4>
+        <h4 class="fw-bold text-dark mb-0">App Kosmetik</h4>
         <small class="text-muted text-uppercase fw-bold" style="font-size: 0.7rem;">Sampling Renlak 2026</small>
     </div>
     <nav class="nav flex-column">
@@ -377,12 +370,7 @@ label {
             </div>
 
             <div class="col-12"><h5 class="text-primary border-bottom pb-2 mt-3">2. Identitas Produk</h5></div>
-           <div class="col-12 mb-3">
-    		<label>Cari Produk dari Database</label>
-   		 <input type="text" id="cariProdukInput" class="form-control" placeholder="Ketik nama atau NIE..." 			oninput="cariProduk()">
-   		 <div id="hasilCariProduk" style="position: relative; z-index: 1000;"></div>
-		</div> 
-	   <div class="col-md-6">
+            <div class="col-md-6">
                 <label>Nama Produk (Sesuai Label)</label>
                 <input type="text" id="namaProduk" class="form-control" placeholder="Nama produk kosmetik" required>
             </div>
@@ -870,63 +858,6 @@ const batch = document.getElementById('batchCekInput').value.trim();   // perbai
 }
 
 function escapeHtml(str) { return str ? str.replace(/[&<>]/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m];}) : ''; }
-
-	// Registrasi Service Worker untuk PWA (Taruh di paling bawah script)
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('Service Worker terdaftar!', reg))
-          .catch(err => console.error('Service Worker gagal:', err));
-      });
-    }
-// Asumsikan dataProduk ada di database-sampling.js
-// Jika nama variabel berbeda, sesuaikan di sini
-function cariProduk() {
-    const keyword = document.getElementById('cariProdukInput').value.toLowerCase().trim();
-    const container = document.getElementById('hasilCariProduk');
-    
-    if (keyword.length < 2) {
-        container.innerHTML = '';
-        return;
-    }
-
-    // Filter dataProduk (pastikan variabel global ini ada)
-    const hasil = dataProduk.filter(item => 
-        item.nama.toLowerCase().includes(keyword) || 
-        item.nie.toLowerCase().includes(keyword)
-    );
-
-    if (hasil.length === 0) {
-        container.innerHTML = '<div class="list-group-item text-muted">Tidak ditemukan.</div>';
-        return;
-    }
-
-    let html = '<div class="list-group" style="max-height: 200px; overflow-y: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">';
-    hasil.forEach(item => {
-        html += `
-            <div class="list-group-item list-group-item-action" style="cursor: pointer;" 
-                 onclick="pilihProduk('${escapeHtml(item.nama)}', '${escapeHtml(item.nie)}')">
-                <strong>${escapeHtml(item.nama)}</strong> <span class="text-muted">(NIE: ${escapeHtml(item.nie)})</span>
-            </div>
-        `;
-    });
-    html += '</div>';
-    container.innerHTML = html;
-}
-
-function pilihProduk(nama, nie) {
-    document.getElementById('namaProduk').value = nama;
-    document.getElementById('nie').value = nie;
-    document.getElementById('cariProdukInput').value = ''; // kosongkan input pencarian
-    document.getElementById('hasilCariProduk').innerHTML = ''; // hilangkan daftar
-}
-
-// Fungsi escapeHtml untuk keamanan
-function escapeHtml(str) {
-    return str ? str.replace(/[&<>]/g, function(m) {
-        return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m];
-    }) : '';
-}
 </script>
 
 </body>
