@@ -632,7 +632,7 @@ async function muatRekapDariSheet() {
     container.innerHTML = '</table><td colspan="6" class="text-center py-4">Mengambil data...</td></tr>';
     footer.innerHTML = '';
 
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbwyhyKiPbEU0Ky6cfmfXhjbCEEKvCZBloG6MqALrV-oDRCINDDLxqER25QgPNxDioSL/exec';
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbzt0KjbM6CID2g6mo0mfbs9oeumuA3oBKuhCj5l9FGU_Y8lc4PJ82zMdDUNBgCim0rA/exec';
     const url = `${webAppUrl}?bulan=${bulan}&tahun=${tahun}`;
     
     try {
@@ -688,6 +688,41 @@ async function muatRekapDariSheet() {
         console.error('Error:', err);
         container.innerHTML = '<tr><td colspan="6" class="text-center text-danger">Gagal memuat data. Periksa konsol.</td></tr>';
     }
+}
+
+function renderTabelRekap(data) {
+    const rekapContainer = document.getElementById('isiTabelRekap');
+    const footerContainer = document.getElementById('footerTabelRekap');
+    
+    let html = '';
+    let tMaret = 0, rMaret = 0, tApril = 0, rApril = 0;
+
+    data.forEach((item, index) => {
+        tMaret += parseInt(item.targetMaret || 0);
+        rMaret += parseInt(item.realisasiMaret || 0);
+        tApril += parseInt(item.targetApril || 0);
+        rApril += parseInt(item.realisasiApril || 0);
+
+        html += `
+            <tr>
+                <td class="text-center">${index + 1}</td>
+                <td class="fw-semibold">${item.kategori}</td>
+                <td class="text-center">${item.targetMaret || 0}</td>
+                <td class="text-center text-primary fw-bold">${item.realisasiMaret || 0}</td>
+                <td class="text-center">${item.targetApril || 0}</td>
+                <td class="text-center text-success fw-bold">${item.realisasiApril || 0}</td>
+            </tr>`;
+    });
+
+    rekapContainer.innerHTML = html;
+    footerContainer.innerHTML = `
+        <tr class="table-light fw-bold">
+            <td colspan="2" class="text-center">TOTAL</td>
+            <td class="text-center">${tMaret}</td>
+            <td class="text-center text-primary">${rMaret}</td>
+            <td class="text-center">${tApril}</td>
+            <td class="text-center text-success">${rApril}</td>
+        </tr>`;
 }
 
 function showSubGuide(tipe) {
@@ -773,7 +808,7 @@ function prosesAntrean() {
     // Ambil data pertama di antrean
     let data = queue[0];
     
-    fetch('https://script.google.com/macros/s/AKfycbwyhyKiPbEU0Ky6cfmfXhjbCEEKvCZBloG6MqALrV-oDRCINDDLxqER25QgPNxDioSL/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbzt0KjbM6CID2g6mo0mfbs9oeumuA3oBKuhCj5l9FGU_Y8lc4PJ82zMdDUNBgCim0rA/exec', {
         method: 'POST',
         mode: 'no-cors',
         body: JSON.stringify(data)
@@ -799,7 +834,7 @@ const batch = document.getElementById('batchCekInput').value.trim();   // perbai
     hasilDiv.style.display = 'block';
     hasilDiv.innerHTML = '<div class="spinner-border text-primary"></div> Mencari...';
 
-    const url = 'https://script.google.com/macros/s/AKfycbwyhyKiPbEU0Ky6cfmfXhjbCEEKvCZBloG6MqALrV-oDRCINDDLxqER25QgPNxDioSL/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbzt0KjbM6CID2g6mo0mfbs9oeumuA3oBKuhCj5l9FGU_Y8lc4PJ82zMdDUNBgCim0rA/exec';
     try {
         const res = await fetch(`${url}?batch=${encodeURIComponent(batch)}`);
         const data = await res.json();
