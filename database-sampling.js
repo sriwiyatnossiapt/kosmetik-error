@@ -905,7 +905,7 @@ const daftarBahanHewani = [
 ];
 
 // Tambahkan ini di bagian bawah file database-sampling.js
-window.dataSubSubKategori = {
+const dataSubSubKategori = {
     // Kunci (Key) harus sama persis dengan teks Nama Sub Kategori yang ada di dropdown kedua
     "Sediaan bayi": [
         "baby oil", 

@@ -403,12 +403,12 @@ label {
                     <option value="" disabled selected>Pilih Kategori dahulu...</option>
                 </select>
             </div>
-            <div class="col-md-4" id="kontainerSubSub" style="display: none;">
-   		 <label>6. Sub-Sub Kategori</label>
-   		 <select id="subSubKategori" class="form-select">
-     		   <option value="" selected>Pilih Sub-Sub Kategori (Jika ada)...</option>
-   		 </select>
-	   </div>
+            <div class="col-md-4">
+    		<label>6. Sub-Sub Kategori</label>
+    		<select id="subSubKategori" class="form-select">
+     		   <option value="" selected>Pilih Sub Kategori dahulu...</option>
+    		</select>
+	</div>
             <div class="col-md-4">
                 <label>7. Metode Sampling</label>
                 <select id="metode" class="form-select">
@@ -473,52 +473,37 @@ function showSection(sectionId, element) {
     document.getElementById('overlay').classList.remove('active');  // tambahkan ini
 };
 }
-   function updateSubKategori() {
-    const kat = document.getElementById("kategori").value;
-    const subKat = document.getElementById("subKategori");
-    
-    // Sembunyikan kontainer sub-sub kembali saat kategori utama berubah
-    document.getElementById("kontainerSubSub").style.display = "none";
-    document.getElementById("subSubKategori").innerHTML = '<option value="" selected>Pilih Sub Kategori dahulu...</option>';
-
-    subKat.innerHTML = '<option value="" disabled selected>Pilih Sub Kategori...</option>';
-    if (dataKategori[kat]) {
-        dataKategori[kat].forEach(item => {
-            let opt = document.createElement("option");
-            opt.value = item;
-            opt.innerHTML = item;
-            subKat.appendChild(opt);
-        });
+    function updateSubKategori() {
+        const kat = document.getElementById("kategori").value;
+        const subKat = document.getElementById("subKategori");
+document.getElementById("subSubKategori").innerHTML = '<option value="" selected>Pilih Sub Kategori dahulu...</option>';
+        subKat.innerHTML = '<option value="" disabled selected>Pilih Sub Kategori...</option>';
+        if (dataKategori[kat]) {
+            dataKategori[kat].forEach(item => {
+                let opt = document.createElement("option");
+                opt.value = item;
+                opt.innerHTML = item;
+                subKat.appendChild(opt);
+            });
+        }
     }
-}
 
 
 function updateSubSubKategori() {
     const subKatValue = document.getElementById("subKategori").value;
     const subSubKatSelect = document.getElementById("subSubKategori");
-    const kontainerSubSub = document.getElementById("kontainerSubSub"); // Ambil elemen kontainer
     
-    // Reset isi dropdown sub-sub kategori terlebih dahulu
+    // Reset dropdown sub-sub kategori
     subSubKatSelect.innerHTML = '<option value="" selected>Pilih Sub-Sub Kategori (Jika ada)...</option>';
     
-    // Cek apakah ada data anak pilihan di database-sampling.js
-    if (window.dataSubSubKategori && window.dataSubSubKategori[subKatValue] && window.dataSubSubKategori[subKatValue].length > 0) {
-        
-        // 1. TAMPILKAN KOLOM jika ada datanya
-        kontainerSubSub.style.display = "block"; 
-        
-        // 2. Isi pilihan dropdown-nya
-        window.dataSubSubKategori[subKatValue].forEach(item => {
+    // Jika data sub-kategori yang dipilih ada di dalam daftar mapping kita
+    if (dataSubSubKategori[subKatValue]) {
+        dataSubSubKategori[subKatValue].forEach(item => {
             let opt = document.createElement("option");
             opt.value = item;
             opt.innerHTML = item;
             subSubKatSelect.appendChild(opt);
         });
-        
-    } else {
-        // 3. SEMBUNYIKAN KOLOM jika tidak ada datanya
-        kontainerSubSub.style.display = "none"; 
-        subSubKatSelect.value = ""; // Pastikan nilainya kosong agar tidak ikut terkirim/mengacaukan data
     }
 }
     function cariDataTMK() {
