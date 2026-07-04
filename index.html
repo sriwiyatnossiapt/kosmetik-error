@@ -386,7 +386,7 @@ label {
                     <option>Kosmetik dengan riwayat Tidak Memenuhi Syarat</option>
                     <option>Kosmetik yang disampling secara mandiri oleh UPT</option>
                     <option>Kosmetik yang diproduksi negara Tiongkok</option>
-                    <option>Kosmetik yang diproduksi negara Thailand--> pilih sampling mandiri upt</option>
+                    <option>Kosmetik yang diproduksi negara Thailand</option>
                     <option>Kosmetik yang dibuat berdasarkan kontrak produksi</option>
                     <option>Kosmetik yang dibuat berdasarkan kuasa merek</option>
                     <option>Kosmetik menengah ke bawah</option>
@@ -399,16 +399,14 @@ label {
             </div>
            <div class="col-md-4">
                 <label>5. Sub Kategori</label>
-                <select id="subKategori" class="form-select" onchange="updateSubSubKategori()" required>
+                <select id="subKategori" class="form-select" required>
                     <option value="" disabled selected>Pilih Kategori dahulu...</option>
                 </select>
             </div>
             <div class="col-md-4">
-    		<label>6. Sub-Sub Kategori</label>
-    		<select id="subSubKategori" class="form-select">
-     		   <option value="" selected>Pilih Sub Kategori dahulu...</option>
-    		</select>
-	</div>
+                <label>6. Sub-Sub Kategori</label>
+                <input type="text" id="subSubKategori" class="form-control" placeholder="Isi jika ada">
+            </div>
             <div class="col-md-4">
                 <label>7. Metode Sampling</label>
                 <select id="metode" class="form-select">
@@ -476,7 +474,6 @@ function showSection(sectionId, element) {
     function updateSubKategori() {
         const kat = document.getElementById("kategori").value;
         const subKat = document.getElementById("subKategori");
-document.getElementById("subSubKategori").innerHTML = '<option value="" selected>Pilih Sub Kategori dahulu...</option>';
         subKat.innerHTML = '<option value="" disabled selected>Pilih Sub Kategori...</option>';
         if (dataKategori[kat]) {
             dataKategori[kat].forEach(item => {
@@ -488,24 +485,6 @@ document.getElementById("subSubKategori").innerHTML = '<option value="" selected
         }
     }
 
-
-function updateSubSubKategori() {
-    const subKatValue = document.getElementById("subKategori").value;
-    const subSubKatSelect = document.getElementById("subSubKategori");
-    
-    // Reset dropdown sub-sub kategori
-    subSubKatSelect.innerHTML = '<option value="" selected>Pilih Sub-Sub Kategori (Jika ada)...</option>';
-    
-    // Jika data sub-kategori yang dipilih ada di dalam daftar mapping kita
-    if (dataSubSubKategori[subKatValue]) {
-        dataSubSubKategori[subKatValue].forEach(item => {
-            let opt = document.createElement("option");
-            opt.value = item;
-            opt.innerHTML = item;
-            subSubKatSelect.appendChild(opt);
-        });
-    }
-}
     function cariDataTMK() {
         const keyword = document.getElementById("inputCariTMK").value.toLowerCase();
         const container = document.getElementById("hasilCariTMK");

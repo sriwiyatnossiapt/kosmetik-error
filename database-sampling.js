@@ -849,10 +849,11 @@
     ];
 
     const dataKategori = {
-        "Kosmetik Beresiko Tinggi": ["Sediaan bayi","Sediaan pewarna rambut", "Sediaan perawatan wajah", "Sediaan rias mata dan perawatan sekitar mata", "Sediaan rias wajah (perona pipi)", "Sediaan rias bibir (lip color)", "Sediaan parfum (eau de cologne)", "Sediaan pewarna kuku"],
+        "Kosmetik Beresiko Tinggi": ["Sediaan bayi","Sediaan pewarna rambut", "Sediaan perawatan wajah", "krim siang", "krim malam", "Pelembab/ Moisturiser", "Sediaan rias mata dan perawatan sekitar mata :Eye shadow", "Sediaan rias mata dan perawatan sekitar mata :Pensil alis", "Sediaan rias mata dan perawatan sekitar mata :Mascara", "Sediaan rias wajah (perona pipi)", "Sediaan rias bibir (lip color)", "Sediaan parfum (eau de cologne)", "Sediaan pewarna kuku"],
         "Kosmetik dengan riwayat Tidak Memenuhi Syarat": ["Sediaan untuk alis (pensil alis)", "Eye shadow", "Eye liner", "Blush on", "Bedak padat/ compact powder", "Pembersih kulit muka", "Mascara", "Eye Make Up Remover", "Penyegar kulit muka/toner", "Lip colour, Lip liner, Lip glos, Lip care", "Pewarna kuku", "Sediaan parfum (eau de cologne)", "Krim pencerah/Skin lightener", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "krim siang", "krim malam", "Sediaan tabir surya"],
-        "Kosmetik yang disampling secara mandiri oleh UPT": ["Kosmetik yang diproduksi negara Filipina", "Kosmetik Prioritas", "Kosmetik kasus khusus (Wasprod)", "Mainan berkosmetik", "Kosmetik yang diproduksi negara Thailand","sediaan untuk kulit berjerawat"],
+        "Kosmetik yang disampling secara mandiri oleh UPT": ["Bedak Badan", "Lip Care", "Mouthwashes / Penyegar mulut", "Kondisioner", "Pembersih Rias Mata/ Eye Make up Remover", "Pembersih Kulit Muka", "Sampo", "Sabun Mandi Bayi Padat", "Sabun Cuci Tangan Cair", "Sampo Ketombe", "Anti Aging / Skin Aging Product", "Cairan Cukur / Pra Cukur / Pasca Cukur", "Kosmetik yang diproduksi negara Filipina", "Kosmetik Prioritas", "Kosmetik kasus khusus (Wasprod)", "Mainan berkosmetik", "Kosmetik yang diproduksi negara Thailand", "Bedak padat/ compact powder", "Pembersih kulit muka", "Lem bulu mata", "Penyegar kulit muka/toner", "Lip colour, Lip liner, Lip glos, Lip care", "Perawatan Kulit Badan Tangan/ Hand Body Lotion", "External Intimate Hygiene", "Deodoran / Antiperspiran", "Pembersih Rambut dan Badan/ Hair and Body Wash", "Sediaan untuk kulit berjerawat"],
         "Kosmetik yang diproduksi negara Tiongkok": ["Krim malam", "Krim Siang/ Day Cream", "Masker Wajah", "Bedak padat/ compact powder", "Eye Make Up Remover", "Lip colour, Lip liner, Lip glos, Lip care", "Mascara", "Pelembab/ Moisturiser", "Pembersih Kulit Muka", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "lipstik"],
+ "Kosmetik yang diproduksi negara Thailand": ["Krim malam","shampoo","Conditioner", "Krim Siang/ Day Cream", "Masker Wajah", "Bedak padat/ compact powder", "Eye Make Up Remover", "Lip colour, Lip liner, Lip glos, Lip care", "Mascara", "Pelembab/ Moisturiser", "Pembersih Kulit Muka", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "lipstik"],
         "Kosmetik yang dibuat berdasarkan kontrak produksi": ["Day Cream", "Night Cream", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "Sediaan tabir surya", "Skin aging product", "Pembersih kulit muka", "Penyegar kulit muka/toner", "Pelembab/ Moisturiser", "Krim pencerah/Skin lightener"],
         "Kosmetik yang dibuat berdasarkan kuasa merek": ["Day Cream", "Night Cream", "Perawatan Kulit Badan Tangan/ Hand Body Lotion", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "Pembersih kulit muka", "Penyegar kulit muka/toner", "Pelembab/ Moisturiser", "Lip colour, Lip liner, Lip glos, Lip care", "Bedak padat/ compact powder", "Bedak wajah", "Hair Body wash", "Baby Hair Body wash"],
         "Kosmetik menengah ke bawah": ["Krim malam","Krim siang", "Bedak padat/ compact powder", "Pembersih kulit muka", "Lem bulu mata", "Eye Make Up Remover", "Penyegar kulit muka/toner", "Lip colour, Lip liner, Lip glos, Lip care", "Pembersih pewarna kuku/ Nail polish remover", "Perawatan Kulit Badan Tangan/ Hand Body Lotion", "External Intimate Hygiene", "Pelembab/ Moisturiser", "Astringent", "Deodoran / Antiperspiran", "Pembersih Rambut dan Badan/ Hair and Body Wash", "Sediaan untuk kulit berjerawat", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume"],
@@ -903,31 +904,3 @@ const daftarBahanHewani = [
     { nama: "Soluble Proteoglycan", deskripsi: "Glikoprotein sapi yang larut." },
     { nama: "Placental Protein", deskripsi: "Zat ekstraktif yang diperoleh dari plasenta mamalia." }
 ];
-
-// Tambahkan ini di bagian bawah file database-sampling.js
-const dataSubSubKategori = {
-    // Kunci (Key) harus sama persis dengan teks Nama Sub Kategori yang ada di dropdown kedua
-    "Sediaan bayi": [
-        "baby oil", 
-        "baby lotion", 
-        "baby cream"
-    ],
-    "Sediaan perawatan wajah": [
-        "krim siang", 
-        "krim malam", 
-        "Pelembab/ Moisturiser"
-    ],
-    "Sediaan rias mata dan perawatan sekitar mata": [
-        "eye shadow", 
-        "sediaan untuk alis (pensil alis)", 
-        "maskara"
-    ],
- "Kosmetik yang diproduksi negara Thailand": ["Krim malam","shampoo","Conditioner", "Krim Siang/ Day Cream", "Masker Wajah", "Bedak padat/ compact powder", "Eye Make Up Remover", "Lip colour, Lip liner, Lip glos, Lip care", "Mascara", "Pelembab/ Moisturiser", "Pembersih Kulit Muka", "Eau de Toilette/ Eau de Parfume/ Eau de Cologne/ Parfume", "lipstik", "Cairan Cukur / Pra Cukur / Pasca Cukur"],
-
- "Kosmetik yang diproduksi negara Filipina": ["Sabun Mandi Padat"],
-
-"Kosmetik Prioritas": ["Kosmetik TL (kasus UPT mandiri)","Kosmetik mudah terurai","Kosmetik  sesuai peredaran (Eau de Cologne)"]
-
-
-    // Silakan teruskan pola ini untuk sub-kategori lainnya...
-};
