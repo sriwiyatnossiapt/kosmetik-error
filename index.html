@@ -17,201 +17,44 @@
         body { background-color: var(--bg-light); font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
         
         /* Sidebar Styles */
-    /* Sidebar Styles */
-.sidebar { 
-    height: 100vh; 
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    border-right: none; 
-    position: fixed; 
-    width: var(--sidebar-width); 
-    z-index: 1000; 
-    transition: 0.3s; 
-    left: 0; 
-    top: 0; 
-}
-.sidebar.collapsed { left: calc(var(--sidebar-width) * -1); }
-.sidebar-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 999;
-}
-.sidebar-overlay.active {
-    display: block;
-}
-.sidebar .nav-link { 
-    color: #e0e7ff; 
-    padding: 12px 20px; 
-    display: flex; 
-    align-items: center; 
-    border-radius: 8px; 
-    margin: 5px 15px; 
-    text-decoration: none; 
-    cursor: pointer; 
-    transition: all 0.3s;
-}
-.sidebar .nav-link:hover { 
-    background-color: rgba(255,255,255,0.15); 
-    color: white; 
-    transform: translateX(5px);
-}
-.sidebar .nav-link.active { 
-    background: #f39c12 !important; 
-    color: #1e3c72 !important; 
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-.sidebar .nav-link i { 
-    margin-right: 12px; 
-    font-size: 20px;
-    transition: transform 0.2s;
-}
-.sidebar .nav-link:hover i {
-    transform: scale(1.1);
-}
-.sidebar h4, .sidebar small {
-    color: white;
-}
+        .sidebar { 
+            height: 100vh; background: white; border-right: 1px solid #dee2e6; 
+            position: fixed; width: var(--sidebar-width); z-index: 1000; 
+            transition: 0.3s; left: 0; top: 0; 
+        }
+        .sidebar.collapsed { left: calc(var(--sidebar-width) * -1); }
+        
+        .nav-link { 
+            color: #555; padding: 12px 20px; display: flex; align-items: center; 
+            border-radius: 8px; margin: 5px 15px; text-decoration: none; cursor: pointer; 
+        }
+        .nav-link:hover { background-color: #f8f9fa; color: #607d8b; }
+        .nav-link.active { background-color: #607d8b !important; color: white !important; }
+        .nav-link i { margin-right: 12px; font-size: 20px; }
 
         /* Content Styles */
-       /* Content Styles - Dengan Background Warna */
-.main-content { 
-    margin-left: var(--sidebar-width); 
-    padding: 40px; 
-    transition: 0.3s; 
-    background: linear-gradient(135deg, #e0f2e9 0%, #c8e6d9 100%);
-    min-height: 100vh;
-}
-.main-content.expanded { 
-    margin-left: 0; 
-}
+        .main-content { margin-left: var(--sidebar-width); padding: 40px; transition: 0.3s; }
+        .main-content.expanded { margin-left: 0; }
+        .form-card, .card { 
+            background: var(--blue-grey-soft); padding: 30px; border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--blue-grey-border); 
+        }
+        .header-title { border-left: 5px solid #607d8b; padding-left: 15px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+        
+        label { font-size: 0.85rem; font-weight: 600; color: #37474f; margin-bottom: 5px; }
+        .readonly-field { background-color: #fdfdfd !important; color: #78909c; font-weight: bold; border: 1px dashed #b0bec5; }
+        .btn-submit { background-color: #607d8b; border: none; padding: 12px 30px; border-radius: 10px; font-weight: bold; color: white; transition: 0.3s; }
+        .btn-submit:hover { background-color: #455a64; transform: translateY(-2px); }
 
-.form-card, .card { 
-    background: rgba(255, 255, 255, 0.95);
-    padding: 30px; 
-    border-radius: 20px; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
-    border: none;
-    backdrop-filter: blur(2px);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.form-card:hover, .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-}
-
-.header-title { 
-    border-left: 5px solid #607d8b; 
-    padding-left: 20px; 
-    margin-bottom: 30px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    background: rgba(255,255,255,0.7);
-    border-radius: 16px;
-    padding: 12px 20px;
-    backdrop-filter: blur(4px);
-}
-.header-title h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin: 0;
-}
-.btn-outline-secondary {
-    border-radius: 40px;
-    padding: 6px 16px;
-    border-color: #607d8b;
-    color: #607d8b;
-}
-.btn-outline-secondary:hover {
-    background: #607d8b;
-    color: white;
-    transform: scale(1.02);
-}
-
-label { 
-    font-size: 0.85rem; 
-    font-weight: 600; 
-    color: #2c3e50; 
-    margin-bottom: 5px; 
-}
-.form-control, .form-select {
-    border-radius: 12px;
-    border: 1px solid #cfd8dc;
-    padding: 10px 14px;
-    transition: 0.2s;
-}
-.form-control:focus, .form-select:focus {
-    border-color: #607d8b;
-    box-shadow: 0 0 0 3px rgba(96,125,139,0.2);
-}
-.readonly-field { 
-    background-color: #f8f9fa !important; 
-    color: #2c3e50; 
-    font-weight: 500; 
-    border: 1px solid #e0e0e0; 
-}
-.btn-submit { 
-    background-color: #607d8b; 
-    border: none; 
-    padding: 12px 30px; 
-    border-radius: 40px; 
-    font-weight: bold; 
-    color: white; 
-    transition: 0.3s;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.btn-submit:hover { 
-    background-color: #455a64; 
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-.btn-light {
-    border-radius: 40px;
-    padding: 10px 24px;
-}
-
-/* Tabel di rekap */
-.table {
-    border-radius: 16px;
-    overflow: hidden;
-}
-.table thead th {
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-}
-.table tbody tr:hover {
-    background-color: #e8f0fe;
-}
-
-@media (max-width: 768px) {
-    .main-content { 
-        margin-left: 0; 
-        padding: 16px; 
-    }
-    .form-card, .card { 
-        padding: 20px; 
-        border-radius: 16px; 
-    }
-    .header-title {
-        padding: 10px 16px;
-    }
-    .header-title h2 {
-        font-size: 1.2rem;
-    }
-    .sidebar { left: -280px; }
-    .sidebar.show { left: 0; }
-}
+        @media (max-width: 768px) {
+            .main-content { margin-left: 0; padding: 20px; }
+            .sidebar { left: -280px; }
+            .sidebar.show { left: 0; }
+        }
     </style>
 </head>
 <body>
-<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
 <div class="sidebar" id="sidebar">
     <div class="p-4 mb-3">
         <h4 class="fw-bold text-dark mb-0">App Kosmetik</h4>
@@ -233,9 +76,6 @@ label {
         <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1XfaZIgQGlgr3r6-zBGdy0QeCiLD_iws8auUR00DWZfY/edit" target="_blank">
             <i class="material-icons">table_view</i> Database Mentah
         </a>
-<a class="nav-link" onclick="showSection('batchContent', this)" id="menuBatch">
-    <i class="material-icons">inventory_2</i> Cek No. Batch
-</a>
         <a class="nav-link" onclick="showSection('rekapContent', this); muatRekapDariSheet()" id="menuRekap">
     <i class="material-icons">analytics</i> Rekap Sampel
 </a>
@@ -278,73 +118,30 @@ label {
         <p class="text-muted">Silakan pilih menu panduan di atas.</p>
     </div>
 </div>
-<div id="batchContent" style="display:none;" class="card">
-    <h4 class="mb-4 text-primary d-flex align-items-center">
-        <span class="material-icons me-2">search</span> Cek Nomor Batch Produk
-    </h4>
-    <div class="row g-3">
-        <div class="col-md-6">
-            <label class="form-label">Masukkan Nomor Batch</label>
-            <input type="text" id="batchCekInput" class="form-control" placeholder="Contoh: BATCH12345">
-        </div>
-        <div class="col-md-2 align-self-end">
-            <button class="btn btn-primary w-100" onclick="cekBatch()">Cek</button>
-        </div>
-    </div>
-    <div id="hasilBatchCek" class="mt-4" style="display:none;">
-        <!-- Hasil pencarian akan ditampilkan di sini -->
-    </div>
-</div>
-
 <div id="rekapContent" style="display:none;" class="card">
-    <h4 class="mb-3 text-primary d-flex align-items-center">
+    <h4 class="mb-4 text-primary d-flex align-items-center">
         <span class="material-icons me-2">analytics</span> Ringkasan Rekapitulasi Sampling
     </h4>
-    <!-- Pilihan Bulan & Tahun -->
-    <div class="row mb-4">
-        <div class="col-md-4">
-            <label>Pilih Bulan</label>
-            <select id="bulanRekap" class="form-select" onchange="muatRekapDariSheet()">
-                <option value="1">Januari</option>
-                <option value="2">Februari</option>
-                <option value="3">Maret</option>
-                <option value="4">April</option>
-                <option value="5" selected>Mei</option>
-                <option value="6">Juni</option>
-                <option value="7">Juli</option>
-                <option value="8">Agustus</option>
-                <option value="9">September</option>
-                <option value="10">Oktober</option>
-                <option value="11">November</option>
-                <option value="12">Desember</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <label>Tahun</label>
-            <input type="text" id="tahunRekap" class="form-control" value="2026" onchange="muatRekapDariSheet()">
-        </div>
-    </div>
-
+    
     <div class="table-responsive">
         <table class="table table-bordered bg-white shadow-sm">
-            <thead class="table-dark text-center">
+            <thead class="table-dark text-center align-middle">
                 <tr>
                     <th rowspan="2" width="50">No</th>
                     <th rowspan="2">Kategori Sampling</th>
-                    <th colspan="2" class="bg-success">Offline</th>
-                    <th colspan="2" class="bg-info">Online</th>
+                    <th colspan="2" class="bg-success">April 2026</th>
                 </tr>
                 <tr>
-                    <th>Target</th>
-                    <th>Realisasi</th>
-                    <th>Target</th>
-                    <th>Realisasi</th>
+                    <th width="80">Target Offline</th>
+                    <th width="80">Realisasi</th>
+                    <th width="80">Target Online</th>
+                    <th width="80">Realisasi</th>
                 </tr>
             </thead>
             <tbody id="isiTabelRekap">
-                <tr><td colspan="6" class="text-center">Pilih bulan dan tahun untuk memuat data.</td></tr>
-            </tbody>
-            <tfoot class="table-light fw-bold" id="footerTabelRekap"></tfoot>
+                </tbody>
+            <tfoot class="table-light fw-bold" id="footerTabelRekap">
+                </tfoot>
         </table>
     </div>
 </div>
@@ -441,22 +238,20 @@ label {
 <script>
     
 
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const main = document.getElementById('main-content');
-    const overlay = document.getElementById('overlay');  // ambil overlay
-    if (window.innerWidth <= 768) {
-        sidebar.classList.toggle('show');
-        overlay.classList.toggle('active');              // sinkronkan overlay
-    } else {
-        sidebar.classList.toggle('collapsed');
-        main.classList.toggle('expanded');
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const main = document.getElementById('main-content');
+        if (window.innerWidth <= 768) {
+            sidebar.classList.toggle('show');
+        } else {
+            sidebar.classList.toggle('collapsed');
+            main.classList.toggle('expanded');
+        }
     }
-}
 
 function showSection(sectionId, element) {
     // Tambahkan 'rekapContent' ke dalam array di bawah ini
-    ['inputFormContent', 'tmkContent', 'negaraContent', 'guideContent', 'rekapContent','batchContent'].forEach(id => {
+    ['inputFormContent', 'tmkContent', 'negaraContent', 'guideContent', 'rekapContent'].forEach(id => {
         const section = document.getElementById(id);
         if(section) section.style.display = 'none';
     });
@@ -466,10 +261,7 @@ function showSection(sectionId, element) {
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
     element.classList.add('active');
     
-    if (window.innerWidth <= 768) {
-    document.getElementById('sidebar').classList.remove('show');
-    document.getElementById('overlay').classList.remove('active');  // tambahkan ini
-};
+    if (window.innerWidth <= 768) document.getElementById('sidebar').classList.remove('show');
 }
     function updateSubKategori() {
         const kat = document.getElementById("kategori").value;
@@ -522,46 +314,7 @@ function showSection(sectionId, element) {
         showSection('inputFormContent', document.getElementById('menuInput'));
         alert("Data " + nama + " berhasil dipilih ke formulir.");
     }
-function updateStatusAntrean() {
-    // Ambil data antrean dari localStorage
-    let queue = JSON.parse(localStorage.getItem('queue_kosmetik') || '[]');
-    
-    // Cari atau buat elemen untuk menampilkan badge notifikasi
-    let badge = document.getElementById('queueBadge');
-    
-    if (queue.length > 0) {
-        // Jika ada data tertunda, tampilkan badge
-        if (!badge) {
-            badge = document.createElement('div');
-            badge.id = 'queueBadge';
-            badge.style.position = 'fixed';
-            badge.style.bottom = '20px';
-            badge.style.right = '20px';
-            badge.style.backgroundColor = '#dc3545';
-            badge.style.color = 'white';
-            badge.style.borderRadius = '50px';
-            badge.style.padding = '10px 15px';
-            badge.style.fontSize = '14px';
-            badge.style.fontWeight = 'bold';
-            badge.style.zIndex = '9999';
-            badge.style.cursor = 'pointer';
-            badge.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-            badge.onclick = function() {
-                if (confirm(`Terdapat ${queue.length} data belum terkirim. Kirim sekarang?`)) {
-                    prosesAntrean();
-                }
-            };
-            document.body.appendChild(badge);
-        }
-        badge.innerHTML = `📤 ${queue.length} data tertunda`;
-        badge.style.display = 'block';
-    } else {
-        // Tidak ada antrean, sembunyikan badge jika ada
-        if (badge) {
-            badge.style.display = 'none';
-        }
-    }
-}
+
   
 function setupAuto() {
     const d = new Date();
@@ -585,16 +338,6 @@ function setupAuto() {
     setupAuto();          // Menjalankan setting waktu & tanggal otomatis
     loadTablePanduan();   // Menjalankan pengisian tabel dari file panduan-sampel.js
      updateStatusAntrean();// Tambahkan ini agar notifikasi muncul saat dibuka
-    if (window.innerWidth <= 768){
-        document.getElementById('sidebar').classList.add('show');
-        document.getElementById('overlay').classList.add('active');
-    }
-       const resetButton = document.querySelector('button[type="reset"]');
-    if (resetButton) {
-        resetButton.addEventListener('click', function() {
-            setTimeout(setupAuto, 10);
-        });
-    }
 };
 document.getElementById('kosmetikForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -620,76 +363,109 @@ document.getElementById('kosmetikForm').addEventListener('submit', function(e) {
     kirimDataKeServer(data);
 });
 
+function kirimDataKeServer(data) {
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbxsE2R4nWkEvscA4k8_DXski3T1TfheJ9E5Lmhui6QcCISwukmJa0R9l6ziLStTNHXK/exec';
+    const btn = document.getElementById('btnSimpan');
 
-async function muatRekapDariSheet() {
-    const bulan = document.getElementById('bulanRekap').value;
-    const tahun = document.getElementById('tahunRekap').value;
-    const container = document.getElementById('isiTabelRekap');
-    const footer = document.getElementById('footerTabelRekap');
-    
-    console.log(`Mengambil rekap untuk bulan ${bulan}, tahun ${tahun}`); // <-- log
-    
-    container.innerHTML = '</table><td colspan="6" class="text-center py-4">Mengambil data...</td></tr>';
-    footer.innerHTML = '';
-
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbzt0KjbM6CID2g6mo0mfbs9oeumuA3oBKuhCj5l9FGU_Y8lc4PJ82zMdDUNBgCim0rA/exec';
-    const url = `${webAppUrl}?bulan=${bulan}&tahun=${tahun}`;
-    
-    try {
-        const response = await fetch(url);
-        console.log('Response status:', response.status); // <-- log status
-        
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        console.log('Data diterima:', data); // <-- lihat struktur data
-        
-        if (!data || data.length === 0) {
-            container.innerHTML = '<tr><td colspan="6" class="text-center">Tidak ada data untuk bulan ini.</td></tr>';
-            return;
-        }
-        
-        let html = '';
-        let totalTargetOff = 0, totalRealisasiOff = 0, totalTargetOn = 0, totalRealisasiOn = 0;
-        
-        data.forEach((item, idx) => {
-            const targetOff = Number(item.target_offline) || 0;
-            const realOff = Number(item.realisasi_offline) || 0;
-            const targetOn = Number(item.target_online) || 0;
-            const realOn = Number(item.realisasi_online) || 0;
-            
-            totalTargetOff += targetOff;
-            totalRealisasiOff += realOff;
-            totalTargetOn += targetOn;
-            totalRealisasiOn += realOn;
-            
-            html += `
-                <tr>
-                    <td class="text-center">${idx + 1}</td>
-                    <td>${escapeHtml(item.kategori)}</td>
-                    <td class="text-center">${targetOff}</td>
-                    <td class="text-center text-primary fw-bold">${realOff}</td>
-                    <td class="text-center">${targetOn}</td>
-                    <td class="text-center text-success fw-bold">${realOn}</td>
-                </tr>
-            `;
-        });
-        
-        container.innerHTML = html;
-        footer.innerHTML = `
-            <tr>
-                <td colspan="2" class="text-center fw-bold">TOTAL</td>
-                <td class="text-center fw-bold">${totalTargetOff}</td>
-                <td class="text-center fw-bold text-primary">${totalRealisasiOff}</td>
-                <td class="text-center fw-bold">${totalTargetOn}</td>
-                <td class="text-center fw-bold text-success">${totalRealisasiOn}</td>
-            </tr>
-        `;
-    } catch (err) {
-        console.error('Error:', err);
-        container.innerHTML = '<tr><td colspan="6" class="text-center text-danger">Gagal memuat data. Periksa konsol.</td></tr>';
+    // Cek apakah online atau offline
+    if (!navigator.onLine) {
+        simpanKeAntrean(data);
+        return;
     }
+
+    btn.disabled = true;
+    btn.innerText = 'Mengirim...';
+
+    fetch(webAppUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(data)
+    })
+    .then(() => {
+        alert("✅ Data Berhasil Terkirim!");
+        document.getElementById('kosmetikForm').reset();
+    })
+    .catch(() => {
+        // Jika gagal karena masalah jaringan
+        simpanKeAntrean(data);
+    })
+    .finally(() => {
+        btn.disabled = false;
+        btn.innerText = "KIRIM DATA KOSMETIK";
+    });
 }
 
+function simpanKeAntrean(data) {
+    let queue = JSON.parse(localStorage.getItem('queue_kosmetik') || '[]');
+    queue.push(data);
+    localStorage.setItem('queue_kosmetik', JSON.stringify(queue));
+    alert("⚠️ Internet terputus. Data disimpan di perangkat dan akan dikirim otomatis saat online.");
+    document.getElementById('kosmetikForm').reset();
+}
+async function muatRekapDariSheet() {
+    const rekapContainer = document.getElementById('isiTabelRekap');
+    const footerContainer = document.getElementById('footerTabelRekap');
+    const CACHE_KEY = 'rekap_data_kosmetik';
+    const CACHE_TIME_KEY = 'rekap_cache_time';
+    const EXPIRE_TIME = 10 * 60 * 1000; // 10 Menit dalam milidetik
+
+    // 1. Cek apakah ada Cache dan belum kadaluarsa
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
+    const now = new Date().getTime();
+
+    if (cachedData && cachedTime && (now - cachedTime < EXPIRE_TIME)) {
+        console.log("Mengambil data dari Cache...");
+        renderTabelRekap(JSON.parse(cachedData));
+        return; // Berhenti di sini, tidak perlu fetch ke Google
+    }
+    rekapContainer.innerHTML = '<tr><td colspan="6" class="text-center py-4">Mengambil data dari spreadsheet...</td></tr>';
+
+    try {
+        const webAppUrl = 'https://script.google.com/macros/s/AKfycbxsE2R4nWkEvscA4k8_DXski3T1TfheJ9E5Lmhui6QcCISwukmJa0R9l6ziLStTNHXK/exec';
+       
+        const response = await fetch(webAppUrl);
+        const data = await response.json();
+// 3. Simpan ke Cache
+        localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+        localStorage.setItem(CACHE_TIME_KEY, now.toString());
+        let html = '';
+        let tMaret = 0, rMaret = 0, tApril = 0, rApril = 0;
+
+        data.forEach((item, index) => {
+            // Akumulasi total
+            tMaret += parseInt(item.targetMaret || 0);
+            rMaret += parseInt(item.realisasiMaret || 0);
+            tApril += parseInt(item.targetApril || 0);
+            rApril += parseInt(item.realisasiApril || 0);
+
+            html += `
+                <tr>
+                    <td class="text-center">${index + 1}</td>
+                    <td class="fw-semibold">${item.kategori}</td>
+                    <td class="text-center">${item.targetMaret || 0}</td>
+                    <td class="text-center text-primary fw-bold">${item.realisasiMaret || 0}</td>
+                    <td class="text-center">${item.targetApril || 0}</td>
+                    <td class="text-center text-success fw-bold">${item.realisasiApril || 0}</td>
+                </tr>`;
+        });
+
+        rekapContainer.innerHTML = html;
+        
+        // Mengisi Baris Total
+        footerContainer.innerHTML = `
+            <tr>
+                <td colspan="2" class="text-center">TOTAL</td>
+                <td class="text-center">${tMaret}</td>
+                <td class="text-center text-primary">${rMaret}</td>
+                <td class="text-center">${tApril}</td>
+                <td class="text-center text-success">${rApril}</td>
+            </tr>`;
+
+    } catch (err) {
+        rekapContainer.innerHTML = '<tr><td colspan="6" class="text-center text-danger">Gagal memuat data. Periksa koneksi atau URL GAS Anda.</td></tr>';
+    }
+}
 function renderTabelRekap(data) {
     const rekapContainer = document.getElementById('isiTabelRekap');
     const footerContainer = document.getElementById('footerTabelRekap');
@@ -808,7 +584,7 @@ function prosesAntrean() {
     // Ambil data pertama di antrean
     let data = queue[0];
     
-    fetch('https://script.google.com/macros/s/AKfycbzt0KjbM6CID2g6mo0mfbs9oeumuA3oBKuhCj5l9FGU_Y8lc4PJ82zMdDUNBgCim0rA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxsE2R4nWkEvscA4k8_DXski3T1TfheJ9E5Lmhui6QcCISwukmJa0R9l6ziLStTNHXK/exec', {
         method: 'POST',
         mode: 'no-cors',
         body: JSON.stringify(data)
@@ -823,40 +599,6 @@ function prosesAntrean() {
     })
     .catch(err => console.log("Gagal sinkronisasi: " + err));
 }
-async function cekBatch() {
-const batch = document.getElementById('batchCekInput').value.trim();   // perbaiki di sini
-    const hasilDiv = document.getElementById('hasilBatchCek');            // perbaiki di sini
-    if (!batch) {
-        hasilDiv.style.display = 'block';
-        hasilDiv.innerHTML = '<div class="alert alert-warning">Masukkan nomor batch.</div>';
-        return;
-    }
-    hasilDiv.style.display = 'block';
-    hasilDiv.innerHTML = '<div class="spinner-border text-primary"></div> Mencari...';
-
-    const url = 'https://script.google.com/macros/s/AKfycbzt0KjbM6CID2g6mo0mfbs9oeumuA3oBKuhCj5l9FGU_Y8lc4PJ82zMdDUNBgCim0rA/exec';
-    try {
-        const res = await fetch(`${url}?batch=${encodeURIComponent(batch)}`);
-        const data = await res.json();
-        if (!data.found) {
-            hasilDiv.innerHTML = `<div class="alert alert-danger">Batch "${batch}" tidak ditemukan.</div>`;
-            return;
-        }
-        hasilDiv.innerHTML = `
-            <div class="alert alert-success">✅ Ditemukan:</div>
-            <table class="table table-bordered">
-                <tr><th>Batch</th><td>${escapeHtml(data.batch)}</td></tr>
-                <tr><th>Nama Produk</th><td>${escapeHtml(data.produk)}</td></tr>
-                <tr><th>Tanggal Sampling</th><td>${escapeHtml(data.tanggal)}</td></tr>
-                <tr><th>Petugas</th><td>${escapeHtml(data.petugas)}</td></tr>
-            </table>
-        `;
-    } catch (err) {
-        hasilDiv.innerHTML = '<div class="alert alert-danger">Gagal mengambil data.</div>';
-    }
-}
-
-function escapeHtml(str) { return str ? str.replace(/[&<>]/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m];}) : ''; }
 </script>
 
 </body>
