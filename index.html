@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renlak Kosmetik 2026</title>
+  <!-- Tambahkan baris ini untuk PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #455a64;
+            --bg-light: #f1f4f5;
+            --blue-grey-soft: #eceff1;
+            --blue-grey-border: #cfd8dc;
+            --sidebar-width: 280px;
+        }
+        body { background-color: var(--bg-light); font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
+        
+        /* Sidebar Styles */
+    /* Sidebar Styles */
+.sidebar { 
+    height: 100vh; 
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-right: none; 
+    position: fixed; 
+    width: var(--sidebar-width); 
+    z-index: 1000; 
+    transition: 0.3s; 
+    left: 0; 
+    top: 0; 
+}
+.sidebar.collapsed { left: calc(var(--sidebar-width) * -1); }
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.sidebar-overlay.active {
+    display: block;
+}
+.sidebar .nav-link { 
+    color: #e0e7ff; 
+    padding: 12px 20px; 
+    display: flex; 
+    align-items: center; 
+    border-radius: 8px; 
+    margin: 5px 15px; 
+    text-decoration: none; 
+    cursor: pointer; 
+    transition: all 0.3s;
+}
+.sidebar .nav-link:hover { 
+    background-color: rgba(255,255,255,0.15); 
+    color: white; 
+    transform: translateX(5px);
+}
+.sidebar .nav-link.active { 
+    background: #f39c12 !important; 
+    color: #1e3c72 !important; 
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.sidebar .nav-link i { 
+    margin-right: 12px; 
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+.sidebar .nav-link:hover i {
+    transform: scale(1.1);
+}
+.sidebar h4, .sidebar small {
+    color: white;
+}
+
+        /* Content Styles */
+       /* Content Styles - Dengan Background Warna */
+.main-content { 
+    margin-left: var(--sidebar-width); 
+    padding: 40px; 
+    transition: 0.3s; 
+    background: linear-gradient(135deg, #e0f2e9 0%, #c8e6d9 100%);
+    min-height: 100vh;
+}
+.main-content.expanded { 
+    margin-left: 0; 
+}
+
+.form-card, .card { 
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+    border: none;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.form-card:hover, .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.header-title { 
+    border-left: 5px solid #607d8b; 
+    padding-left: 20px; 
+    margin-bottom: 30px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background: rgba(255,255,255,0.7);
+    border-radius: 16px;
+    padding: 12px 20px;
+    backdrop-filter: blur(4px);
+}
+.header-title h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+.btn-outline-secondary {
+    border-radius: 40px;
+    padding: 6px 16px;
+    border-color: #607d8b;
+    color: #607d8b;
+}
+.btn-outline-secondary:hover {
+    background: #607d8b;
+    color: white;
+    transform: scale(1.02);
+}
+
+label { 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    color: #2c3e50; 
+    margin-bottom: 5px; 
+}
+.form-control, .form-select {
+    border-radius: 12px;
+    border: 1px solid #cfd8dc;
+    padding: 10px 14px;
+    transition: 0.2s;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #607d8b;
+    box-shadow: 0 0 0 3px rgba(96,125,139,0.2);
+}
+.readonly-field { 
+    background-color: #f8f9fa !important; 
+    color: #2c3e50; 
+    font-weight: 500; 
+    border: 1px solid #e0e0e0; 
+}
+.btn-submit { 
+    background-color: #607d8b; 
+    border: none; 
+    padding: 12px 30px; 
+    border-radius: 40px; 
+    font-weight: bold; 
+    color: white; 
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.btn-submit:hover { 
+    background-color: #455a64; 
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.btn-light {
+    border-radius: 40px;
+    padding: 10px 24px;
+}
+
+/* Tabel di rekap */
+.table {
+    border-radius: 16px;
+    overflow: hidden;
+}
+.table thead th {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+}
+.table tbody tr:hover {
+    background-color: #e8f0fe;
+}
+
+@media (max-width: 768px) {
+    .main-content { 
+        margin-left: 0; 
+        padding: 16px; 
+    }
+    .form-card, .card { 
+        padding: 20px; 
+        border-radius: 16px; 
+    }
+    .header-title {
+        padding: 10px 16px;
+    }
+    .header-title h2 {
+        font-size: 1.2rem;
+    }
+    .sidebar { left: -280px; }
+    .sidebar.show { left: 0; }
+}
+#hasilCariProduk .list-group-item:hover {
+    background-color: #e0f2fe;
+}
+    </style>
+</head>
+<body>
+<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+<div class="sidebar" id="sidebar">
+    <div class="p-4 mb-3">
+        <h4 class="fw-bold text-dark mb-0">Kosmetik: Informasi & Sistem Sampling </h4>
+        <small class="text-muted text-uppercase fw-bold" style="font-size: 0.7rem;">Sampling Renlak 2026</small>
+    </div>
+    <nav class="nav flex-column">
+        <a class="nav-link active" onclick="showSection('inputFormContent', this)" id="menuInput">
+            <i class="material-icons">add_task</i> Input Sampling
+        </a>
+        <a class="nav-link" onclick="showSection('tmkContent', this)" id="menuTMK">
+            <i class="material-icons">history</i> Cari Riwayat TMK
+        </a>
+        <a class="nav-link" onclick="showSection('negaraContent', this)" id="menuNegara">
+            <i class="material-icons">public</i> Produsen Penotifikasi produk Negara lain (sampling mandiri UPT)
+        </a>
+        <a class="nav-link" onclick="showSection('guideContent', this)" id="menuPanduan">
+            <i class="material-icons">rule</i> Panduan Sampel
+        </a>
+        <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1XfaZIgQGlgr3r6-zBGdy0QeCiLD_iws8auUR00DWZfY/edit" target="_blank">
+            <i class="material-icons">table_view</i> Database Mentah
+        </a>
+<a class="nav-link" onclick="showSection('batchContent', this)" id="menuBatch">
+    <i class="material-icons">inventory_2</i> Cek No. Batch
+</a>
+        <a class="nav-link" onclick="showSection('rekapContent', this); muatRekapDariSheet()" id="menuRekap">
+    <i class="material-icons">analytics</i> Rekap Sampel
+</a>
+    </nav>
+</div>
+
+<div class="main-content" id="main-content">
+    <div class="header-title">
+        <h2 class="fw-bold text-dark m-0" id="pageTitle">Form Renlak Kosmetik 2026</h2>
+        <button class="btn btn-outline-secondary" onclick="toggleSidebar()"><i class="material-icons">menu</i></button>
+    </div>
+
+    <div id="tmkContent" style="display:none;" class="card mb-4">
+        <h4 class="mb-4 text-primary"><span class="material-icons">search</span> Cari Riwayat TMK Produsen</h4>
+        <div class="input-group mb-3">
+            <input type="text" id="inputCariTMK" class="form-control" placeholder="Ketik nama PT atau CV..." oninput="cariDataTMK()">
+        </div>
+        <div id="hasilCariTMK"></div>
+    </div>
+
+    <div id="negaraContent" style="display:none;" class="card">
+        <h5 class="mb-3 text-success">Daftar Penotifikasi Negara , lamp.keputusan kabpom 131 TAHUN 2026 </h5>
+        <div class="row mb-3">
+            <div class="col-md-4"><button class="btn btn-outline-success w-100 mb-2" onclick="filterByCountry('Thailand')">Thailand</button></div>
+            <div class="col-md-4"><button class="btn btn-outline-success w-100 mb-2" onclick="filterByCountry('Tiongkok')">Tiongkok</button></div>
+            <div class="col-md-4"><button class="btn btn-outline-success w-100 mb-2" onclick="filterByCountry('Filipina')">Filipina</button></div>
+        </div>
+        <div id="listNegaraHasil"></div>
+    </div>
+
+    <div id="guideContent" style="display:none;" class="card">
+    <h4 class="mb-4 text-primary">Panduan Sampling</h4>
+    
+    <div class="d-flex gap-2 mb-4">
+        <button class="btn btn-outline-primary" onclick="showSubGuide('jumlah')">Jumlah Pengambilan</button>
+        <button class="btn btn-outline-primary" onclick="showSubGuide('porcine')">Panduan DNA Porcine</button>
+    </div>
+
+    <div id="subGuideContainer">
+        <p class="text-muted">Silakan pilih menu panduan di atas.</p>
+    </div>
+</div>
+<div id="batchContent" style="display:none;" class="card">
+    <h4 class="mb-4 text-primary d-flex align-items-center">
+        <span class="material-icons me-2">search</span> Cek Nomor Batch Produk
+    </h4>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Masukkan Nomor Batch</label>
+            <input type="text" id="batchCekInput" class="form-control" placeholder="Contoh: BATCH12345">
+        </div>
+        <div class="col-md-2 align-self-end">
+            <button class="btn btn-primary w-100" onclick="cekBatch()">Cek</button>
+        </div>
+    </div>
+    <div id="hasilBatchCek" class="mt-4" style="display:none;">
+        <!-- Hasil pencarian akan ditampilkan di sini -->
+    </div>
+</div>
+
+<div id="rekapContent" style="display:none;" class="card">
+    <h4 class="mb-3 text-primary d-flex align-items-center">
+        <span class="material-icons me-2">analytics</span> Ringkasan Rekapitulasi Sampling
+    </h4>
+    <!-- Pilihan Bulan & Tahun -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label>Pilih Bulan</label>
+            <select id="bulanRekap" class="form-select" onchange="muatRekapDariSheet()">
+                <option value="1">Januari</option>
+                <option value="2">Februari</option>
+                <option value="3">Maret</option>
+                <option value="4">April</option>
+                <option value="5" selected>Mei</option>
+                <option value="6">Juni</option>
+                <option value="7">Juli</option>
+                <option value="8">Agustus</option>
+                <option value="9">September</option>
+                <option value="10">Oktober</option>
+                <option value="11">November</option>
+                <option value="12">Desember</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label>Tahun</label>
+            <input type="text" id="tahunRekap" class="form-control" value="2026" onchange="muatRekapDariSheet()">
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered bg-white shadow-sm">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th rowspan="2" width="50">No</th>
+                    <th rowspan="2">Kategori Sampling</th>
+                    <th colspan="2" class="bg-success">Offline</th>
+                    <th colspan="2" class="bg-info">Online</th>
+                </tr>
+                <tr>
+                    <th>Target</th>
+                    <th>Realisasi</th>
+                    <th>Target</th>
+                    <th>Realisasi</th>
+                </tr>
+            </thead>
+            <tbody id="isiTabelRekap">
+                <tr><td colspan="6" class="text-center">Pilih bulan dan tahun untuk memuat data.</td></tr>
+            </tbody>
+            <tfoot class="table-light fw-bold" id="footerTabelRekap"></tfoot>
+        </table>
+    </div>
+</div>
+
+    <div id="inputFormContent" class="form-card">
+        <form id="kosmetikForm" class="row g-4">
+            <div class="col-12"><h5 class="text-primary border-bottom pb-2">1. Data Administrasi</h5></div>
+            <div class="col-md-2">
+                <label>No. Sampel</label>
+                <input type="text" id="noSample" class="form-control readonly-field" value="Otomatis" readonly>
+            </div>
+            <div class="col-md-3">
+                <label>Tanggal Sampling</label>
+                <input type="text" id="tglSampling" class="form-control readonly-field" readonly>
+            </div>
+            <div class="col-md-2">
+                <label>Bulan (Angka)</label>
+                <input type="text" id="bulanAuto" class="form-control readonly-field" readonly>
+            </div>
+            <div class="col-md-5">
+                <label>Nama Petugas</label>
+                <input type="text" id="petugas" class="form-control" placeholder="Nama Petugas" required>
+            </div>
+
+            <div class="col-12"><h5 class="text-primary border-bottom pb-2 mt-3">2. Identitas Produk</h5></div>
+           <div class="col-12 mb-3">
+    		<label>Cari Produk dari Database</label>
+   		 <input type="text" id="cariProdukInput" class="form-control" placeholder="Ketik nama atau NIE..." 			oninput="cariProduk()">
+   		 <div id="hasilCariProduk" style="position: relative; z-index: 1000;"></div>
+		</div> 
+	   <div class="col-md-6">
+                <label>Nama Produk (Sesuai Label)</label>
+                <input type="text" id="namaProduk" class="form-control" placeholder="Nama produk kosmetik" required>
+            </div>
+            <div class="col-md-6">
+                <label>Nomor Izin Edar (NIE)</label>
+                <input type="text" id="nie" class="form-control" placeholder="NA18xxxxxxxxxx" required>
+            </div>
+            <div class="col-md-4">
+                <label>Kategori Sampling</label>
+                <select id="kategori" class="form-select" onchange="updateSubKategori()" required>
+                    <option value="" disabled selected>Pilih Kategori...</option>
+                    <option>Kosmetik Beresiko Tinggi</option>
+                    <option>Kosmetik dengan riwayat Tidak Memenuhi Syarat</option>
+                    <option>Kosmetik yang disampling secara mandiri oleh UPT</option>
+                    <option>Kosmetik yang diproduksi negara Tiongkok</option>
+                    <option>Kosmetik yang diproduksi negara Thailand--> pilih sampling mandiri upt</option>
+                    <option>Kosmetik yang dibuat berdasarkan kontrak produksi</option>
+                    <option>Kosmetik yang dibuat berdasarkan kuasa merek</option>
+                    <option>Kosmetik menengah ke bawah</option>
+                    <option>Kosmetik dengan klaim komposisi bahan tertentu</option>
+                    <option>Kosmetik yang diduga mengandung DNA porcine</option>
+                    <option>Kosmetik viral</option>
+                    <option>Kosmetik di online official store/reseller</option>
+
+                </select>
+            </div>
+           <div class="col-md-4">
+                <label>5. Sub Kategori</label>
+                <select id="subKategori" class="form-select" onchange="updateSubSubKategori()" required>
+                    <option value="" disabled selected>Pilih Kategori dahulu...</option>
+                </select>
+            </div>
+            <div class="col-md-4" id="kontainerSubSub" style="display: none;">
+   		 <label>6. Sub-Sub Kategori</label>
+   		 <select id="subSubKategori" class="form-select">
+     		   <option value="" selected>Pilih Sub-Sub Kategori (Jika ada)...</option>
+   		 </select>
+	   </div>
+            <div class="col-md-4">
+                <label>7. Metode Sampling</label>
+                <select id="metode" class="form-select">
+                    <option>Offline</option>
+                    <option>Online</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label>9. Nomor Batch</label>
+                <input type="text" id="noBatch" class="form-control" placeholder="Batch produksi">
+            </div>
+            <div class="col-md-4">
+                <label>10. Expired Date</label>
+                <input type="text" id="expDate" class="form-control" placeholder="Tgl/Bulan/Tahun">
+            </div>
+
+            <div class="col-12">
+                <label>11. Tempat Sampling</label>
+                <input type="text" id="tempatSampling" class="form-control" placeholder="Lokasi toko atau marketplace">
+            </div>
+
+            <div class="col-12 text-end pt-4 border-top mt-4">
+                <button type="reset" class="btn btn-light px-4 me-2">Reset</button>
+                  <button type="submit" id="btnSimpan" class="btn btn-submit shadow-sm">KIRIM DATA KOSMETIK</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="database-sampling.js"></script>
+    <script src="panduan-sampel.js"></script>
+<script>
+    
+
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const main = document.getElementById('main-content');
+    const overlay = document.getElementById('overlay');  // ambil overlay
+    if (window.innerWidth <= 768) {
+        sidebar.classList.toggle('show');
+        overlay.classList.toggle('active');              // sinkronkan overlay
+    } else {
+        sidebar.classList.toggle('collapsed');
+        main.classList.toggle('expanded');
+    }
+}
+
+function showSection(sectionId, element) {
+    // Tambahkan 'rekapContent' ke dalam array di bawah ini
+    ['inputFormContent', 'tmkContent', 'negaraContent', 'guideContent', 'rekapContent','batchContent'].forEach(id => {
+        const section = document.getElementById(id);
+        if(section) section.style.display = 'none';
+    });
+    
+    document.getElementById(sectionId).style.display = 'block';
+    document.getElementById('pageTitle').innerText = element.innerText.trim();
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    element.classList.add('active');
+    
+    if (window.innerWidth <= 768) {
+    document.getElementById('sidebar').classList.remove('show');
+    document.getElementById('overlay').classList.remove('active');  // tambahkan ini
+};
+}
+   function updateSubKategori() {
+    const kat = document.getElementById("kategori").value;
+    const subKat = document.getElementById("subKategori");
+    
+    // Sembunyikan kontainer sub-sub kembali saat kategori utama berubah
+    document.getElementById("kontainerSubSub").style.display = "none";
+    document.getElementById("subSubKategori").innerHTML = '<option value="" selected>Pilih Sub Kategori dahulu...</option>';
+
+    subKat.innerHTML = '<option value="" disabled selected>Pilih Sub Kategori...</option>';
+    if (dataKategori[kat]) {
+        dataKategori[kat].forEach(item => {
+            let opt = document.createElement("option");
+            opt.value = item;
+            opt.innerHTML = item;
+            subKat.appendChild(opt);
+        });
+    }
+}
+
+
+function updateSubSubKategori() {
+    const subKatValue = document.getElementById("subKategori").value;
+    const subSubKatSelect = document.getElementById("subSubKategori");
+    const kontainerSubSub = document.getElementById("kontainerSubSub"); // Ambil elemen kontainer
+    
+    // Reset isi dropdown sub-sub kategori terlebih dahulu
+    subSubKatSelect.innerHTML = '<option value="" selected>Pilih Sub-Sub Kategori (Jika ada)...</option>';
+    
+    // Cek apakah ada data anak pilihan di database-sampling.js
+    if (window.dataSubSubKategori && window.dataSubSubKategori[subKatValue] && window.dataSubSubKategori[subKatValue].length > 0) {
+        
+        // 1. TAMPILKAN KOLOM jika ada datanya
+        kontainerSubSub.style.display = "block"; 
+        
+        // 2. Isi pilihan dropdown-nya
+        window.dataSubSubKategori[subKatValue].forEach(item => {
+            let opt = document.createElement("option");
+            opt.value = item;
+            opt.innerHTML = item;
+            subSubKatSelect.appendChild(opt);
+        });
+        
+    } else {
+        // 3. SEMBUNYIKAN KOLOM jika tidak ada datanya
+        kontainerSubSub.style.display = "none"; 
+        subSubKatSelect.value = ""; // Pastikan nilainya kosong agar tidak ikut terkirim/mengacaukan data
+    }
+}
+    function cariDataTMK() {
+        const keyword = document.getElementById("inputCariTMK").value.toLowerCase();
+        const container = document.getElementById("hasilCariTMK");
+        if (keyword.length < 2) { container.innerHTML = ""; return; }
+
+        const hasil = dataTMK.filter(item => item.nama.toLowerCase().includes(keyword));
+        let html = '<div class="list-group">';
+        hasil.forEach(item => {
+            html += `
+                <div class="list-group-item list-group-item-action mb-2 border-start border-danger border-4" onclick="pilihKeForm('${item.nama}')">
+                    <h6 class="mb-1 fw-bold text-danger">${item.nama}</h6>
+                    <small>Riwayat: ${item.riwayat}</small>
+                </div>`;
+        });
+        container.innerHTML = html || '<p class="text-center">Tidak ditemukan.</p>';
+    }
+
+    function filterByCountry(country) {
+        const resultDiv = document.getElementById('listNegaraHasil');
+        const data = databasePenotif.filter(item => item.negara === country);
+        let html = `<h6 class="mt-3">Hasil Penotifikasi: ${country}</h6><div class="list-group">`;
+        data.forEach(item => {
+            html += `
+                <div class="list-group-item list-group-item-action" onclick="pilihKeForm('${item.nama}')">
+                    <div class="fw-bold">${item.nama}</div>
+                    <small class="text-muted">Status: Penotifikasi Aktif</small>
+                </div>`;
+        });
+        resultDiv.innerHTML = html + '</div>';
+    }
+
+    function pilihKeForm(nama) {
+        // Otomatis isi produsen dan beri awalan di nama produk
+           document.getElementById('namaProduk').value = "[Sesuai Database] ";
+        showSection('inputFormContent', document.getElementById('menuInput'));
+        alert("Data " + nama + " berhasil dipilih ke formulir.");
+    }
+function updateStatusAntrean() {
+    // Ambil data antrean dari localStorage
+    let queue = JSON.parse(localStorage.getItem('queue_kosmetik') || '[]');
+    
+    // Cari atau buat elemen untuk menampilkan badge notifikasi
+    let badge = document.getElementById('queueBadge');
+    
+    if (queue.length > 0) {
+        // Jika ada data tertunda, tampilkan badge
+        if (!badge) {
+            badge = document.createElement('div');
+            badge.id = 'queueBadge';
+            badge.style.position = 'fixed';
+            badge.style.bottom = '20px';
+            badge.style.right = '20px';
+            badge.style.backgroundColor = '#dc3545';
+            badge.style.color = 'white';
+            badge.style.borderRadius = '50px';
+            badge.style.padding = '10px 15px';
+            badge.style.fontSize = '14px';
+            badge.style.fontWeight = 'bold';
+            badge.style.zIndex = '9999';
+            badge.style.cursor = 'pointer';
+            badge.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+            badge.onclick = function() {
+                if (confirm(`Terdapat ${queue.length} data belum terkirim. Kirim sekarang?`)) {
+                    prosesAntrean();
+                }
+            };
+            document.body.appendChild(badge);
+        }
+        badge.innerHTML = `📤 ${queue.length} data tertunda`;
+        badge.style.display = 'block';
+    } else {
+        // Tidak ada antrean, sembunyikan badge jika ada
+        if (badge) {
+            badge.style.display = 'none';
+        }
+    }
+}
+  
+function setupAuto() {
+    const d = new Date();
+
+    const options = {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    };
+
+    const timestamp = d.toLocaleString('id-ID', options);
+
+    document.getElementById('tglSampling').value = timestamp;
+    document.getElementById('bulanAuto').value = d.getMonth() + 1;
+}
+
+   window.onload = function() {
+    setupAuto();          // Menjalankan setting waktu & tanggal otomatis
+    loadTablePanduan();   // Menjalankan pengisian tabel dari file panduan-sampel.js
+     updateStatusAntrean();// Tambahkan ini agar notifikasi muncul saat dibuka
+    if (window.innerWidth <= 768){
+        document.getElementById('sidebar').classList.add('show');
+        document.getElementById('overlay').classList.add('active');
+    }
+       const resetButton = document.querySelector('button[type="reset"]');
+    if (resetButton) {
+        resetButton.addEventListener('click', function() {
+            setTimeout(setupAuto, 10);
+        });
+    }
+};
+document.getElementById('kosmetikForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Ambil data dari form
+    const data = {
+             tanggal: document.getElementById('tglSampling').value,
+            produk: document.getElementById('namaProduk').value,
+            kategori: document.getElementById('kategori').value,
+            subKategori: document.getElementById('subKategori').value,
+            subSubKategori: document.getElementById('subSubKategori').value,
+            metode: document.getElementById('metode').value,
+            nie: document.getElementById('nie').value,
+            batch: document.getElementById('noBatch').value,
+            expired: document.getElementById('expDate').value,
+            tempat: document.getElementById('tempatSampling').value,
+            bulan: document.getElementById('bulanAuto').value,
+            petugas: document.getElementById('petugas').value
+
+    };
+
+    // Coba kirim langsung ke Google Script
+    kirimDataKeServer(data);
+});
+
+
+async function muatRekapDariSheet() {
+    const bulan = document.getElementById('bulanRekap').value;
+    const tahun = document.getElementById('tahunRekap').value;
+    const container = document.getElementById('isiTabelRekap');
+    const footer = document.getElementById('footerTabelRekap');
+    
+    console.log(`Mengambil rekap untuk bulan ${bulan}, tahun ${tahun}`); // <-- log
+    
+    container.innerHTML = '</table><td colspan="6" class="text-center py-4">Mengambil data...</td></tr>';
+    footer.innerHTML = '';
+
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbwyhyKiPbEU0Ky6cfmfXhjbCEEKvCZBloG6MqALrV-oDRCINDDLxqER25QgPNxDioSL/exec';
+    const url = `${webAppUrl}?bulan=${bulan}&tahun=${tahun}`;
+    
+    try {
+        const response = await fetch(url);
+        console.log('Response status:', response.status); // <-- log status
+        
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        console.log('Data diterima:', data); // <-- lihat struktur data
+        
+        if (!data || data.length === 0) {
+            container.innerHTML = '<tr><td colspan="6" class="text-center">Tidak ada data untuk bulan ini.</td></tr>';
+            return;
+        }
+        
+        let html = '';
+        let totalTargetOff = 0, totalRealisasiOff = 0, totalTargetOn = 0, totalRealisasiOn = 0;
+        
+        data.forEach((item, idx) => {
+            const targetOff = Number(item.target_offline) || 0;
+            const realOff = Number(item.realisasi_offline) || 0;
+            const targetOn = Number(item.target_online) || 0;
+            const realOn = Number(item.realisasi_online) || 0;
+            
+            totalTargetOff += targetOff;
+            totalRealisasiOff += realOff;
+            totalTargetOn += targetOn;
+            totalRealisasiOn += realOn;
+            
+            html += `
+                <tr>
+                    <td class="text-center">${idx + 1}</td>
+                    <td>${escapeHtml(item.kategori)}</td>
+                    <td class="text-center">${targetOff}</td>
+                    <td class="text-center text-primary fw-bold">${realOff}</td>
+                    <td class="text-center">${targetOn}</td>
+                    <td class="text-center text-success fw-bold">${realOn}</td>
+                </tr>
+            `;
+        });
+        
+        container.innerHTML = html;
+        footer.innerHTML = `
+            <tr>
+                <td colspan="2" class="text-center fw-bold">TOTAL</td>
+                <td class="text-center fw-bold">${totalTargetOff}</td>
+                <td class="text-center fw-bold text-primary">${totalRealisasiOff}</td>
+                <td class="text-center fw-bold">${totalTargetOn}</td>
+                <td class="text-center fw-bold text-success">${totalRealisasiOn}</td>
+            </tr>
+        `;
+    } catch (err) {
+        console.error('Error:', err);
+        container.innerHTML = '<tr><td colspan="6" class="text-center text-danger">Gagal memuat data. Periksa konsol.</td></tr>';
+    }
+}
+
+function showSubGuide(tipe) {
+    const container = document.getElementById('subGuideContainer');
+    
+    if (tipe === 'jumlah') {
+        container.innerHTML = `
+            <h5>Panduan Jumlah Pengambilan Sampel</h5>
+            <div class="table-responsive">
+                <table class="table table-bordered bg-white">
+                    <thead class="table-secondary">
+                        <tr><th>Kategori</th><th>Parameter Kimia</th><th>Parameter Mikro</th></tr>
+                    </thead>
+                    <tbody id="isiTabelPanduan"></tbody>
+                </table>
+            </div>`;
+        loadTablePanduan(); // Panggil fungsi asal Anda
+    } else if (tipe === 'porcine') {
+        container.innerHTML = `
+            <h5>Panduan Sampling Kosmetik (DNA Porcine)</h5>
+            <div class="p-3 bg-white border rounded">
+    <p>Prosedur khusus pengambilan sampel untuk pengujian DNA Porcine berdasarkan per kabpom 131 th 2026:</p>
+    <p>Hal-hal yang perlu diperhatikan terkait sampling dan pengujian kosmetik yang diduga mengandung DNA porcine:</p>
+    <ul>
+        <li>Pengambilan sampel hanya dilakukan oleh Balai Besar POM (BBPOM).</li>
+        <li>Jumlah sampel minimal 7 pcs dengan bets yang sama dan berat/volume minimal 50 gram atau 50 ml.</li>
+        <li>Pengujian hanya dilakukan terhadap parameter uji deteksi fragmen DNA/protein porcine.</li>
+        <li>Teknis pengujian mengacu pada Pedoman Regionalisasi Laboratorium dan Standar Kemampuan Laboratorium yang berlaku.</li>
+    </ul>
+<p>Daftar bahan kosmetik yang bersumber dari hewani</p>
+<li>Allantoin: Asam urat dari sapi, sebagian besar mamalia. Juga terdapat di banyak tanaman.</li>
+<li>Arachidonic Acid (Asam Arakidonat): Asam lemak tak jenuh cair yang ditemukan di hati, otak, kelenjar, serta lemak hewan dan manusia.</li>
+<li>Bee Pollen: Lilin yang dimurnikan dari sarang lebah Apis mellifera.</li>
+<li>Biotin: Terdapat di setiap sel hidup dan dalam jumlah yang lebih besar pada susu dan ragi.</li>
+<li>Casein (Kasein): Kombinasi kompleks yang diproduksi di jaringan kelenjar susu dari asam amino yang disuplai oleh darah. Bisa didapatkan dari susu kedelai.</li>
+<li>Leukocyte (Leukosit): Sel darah putih.</li>
+<li>Serum albumin: Albumin, serum darah.</li>
+<li>Gelatin, arginine: Kombinasi protein kompleks yang diperoleh melalui hidrolisis kolagen dengan cara merebus kulit, tendon, ligamen, tulang, dan lain-lain.</li>
+<li>Carmine (CI 75470): Pigmen merah dari serangga cochineal betina yang dihancurkan.</li>
+<li>Cerebrosides: Sfingolipid yang diisolasi dari otak dan sistem saraf pusat hewan.Catatan: Cerebrosides termasuk bahan yang dilarang di Eropa (Annex II/419).</li>
+<li>Cholesterol (Kolesterol): Alkohol steroid yang terdapat di semua lemak dan minyak hewani, jaringan saraf, kuning telur, dan darah.</li>
+<li>Collagen (Kolagen): Protein berserat yang mencakup sepertiga dari total protein.</li>
+<li>Elastin: Protein tidak larut yang diekstraksi dari organisme mamalia.</li>
+<li>Hyaluronic Acid (Asam Hialuronat): Jika berasal dari hewan, protein ini ditemukan di tali pusat dan cairan di sekitar sendi. Dapat juga bersumber dari tanaman atau sintetis.</li>
+<li>Keratins (Keratin): Protein berserat alami yang terdapat pada vertebrata.</li>
+<li>Lactic Acid (Asam Laktat): Biasanya berasal dari tanaman seperti bit. Jika berasal dari hewan, ditemukan dalam darah dan jaringan otot.</li>
+<li>Lactose (Laktosa): Gula susu dari susu mamalia.</li>
+<li>Lanolin: Turunan murni dari sekresi kelenjar sebasea (lemak kulit) domba yang menyerupai lemak.</li>
+<li>Embryo Extract: Ekstrak yang diperoleh dari kulit embrio mamalia.</li>
+<li>Lecithin (Lesitin): Zat lilin dalam jaringan saraf semua organisme hidup. Namun, untuk keperluan komersial, sering diperoleh dari telur dan kedelai. Juga dapat berasal dari jaringan saraf, darah, susu, jagung, dan juga dapat dibuat secara sintetis.</li>
+<li>Lipase: Enzim dari lambung dan kelenjar lidah anak sapi, anak kambing, dan anak domba.</li>
+<li>Methionine (Metionin): Asam amino esensial yang ditemukan dalam berbagai protein (biasanya dari albumin telur dan kasein). Dapat juga dibuat secara sintetis.</li>
+<li>Milk Protein (Protein Susu): Campuran protein yang diperoleh dari susu sapi.</li>
+<li>Glycerides (Gliserida): Dari lemak hewani atau nabati.</li>
+<li>Mink Oil (Minyak Cerpelai): Jaringan lemak sub-dermal (di bawah kulit) cerpelai.</li>
+<li>Oleic Acid (Asam Oleat): Diperoleh dari berbagai lemak dan minyak hewani serta nabati.</li>
+<li>Nucleic Acid (Asam Nukleat): Terdapat dalam inti semua sel hidup, juga dapat diperoleh dari tanaman.</li>
+<li>Placenta (Plasenta): Plasenta mamalia.
+<li>Myristic Acid (Asam Miristat): Asam organik yang biasanya berasal dari minyak kacang-kacangan, tetapi kadang-kadang berasal dari hewan.</li>
+<li>Stearic Acid (Asam Stearat): Asam lemak dari hewan atau tanaman.</li>
+<li>Tyrosine (Tirosin): Asam amino yang sering berasal dari tanaman atau sintetis, tetapi terkadang dihidrolisis dari kasein (susu).</li>
+<li>Colostrum (Kolostrum): Cairan yang disekresikan oleh kelenjar susu setelah kelahiran hewan.</li>
+<li>Glycosphingolipid (Glikosfingolipid): Sfingolipid.</li>
+<li>Soluble Proteoglycan: Glikoprotein sapi yang larut.</li>
+<li>Placental Protein (Protein Plasenta): Zat ekstraktif dan turunan yang dimodifikasi secara fisik seperti protein, lipid, karbohidrat, asam nukleat, ion anorganik, dll., yang diperoleh dari plasenta mamalia.</li>
+
+
+
+</div>
+            </div>`;
+    }
+}
+
+// Jalankan saat halaman dimuat
+window.addEventListener('online', prosesAntrean);
+
+function prosesAntrean() {
+    let queue = JSON.parse(localStorage.getItem('queue_kosmetik') || '[]');
+    if (queue.length === 0) return;
+
+    console.log("Internet tersambung! Memproses " + queue.length + " data tertunda...");
+    
+    // Ambil data pertama di antrean
+    let data = queue[0];
+    
+    fetch('https://script.google.com/macros/s/AKfycbwyhyKiPbEU0Ky6cfmfXhjbCEEKvCZBloG6MqALrV-oDRCINDDLxqER25QgPNxDioSL/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(data)
+    })
+    .then(() => {
+        console.log("Data sukses terkirim dari antrean");
+        queue.shift(); // Hapus data yang sudah terkirim
+        localStorage.setItem('queue_kosmetik', JSON.stringify(queue));
+        
+        // Panggil lagi fungsi ini untuk data berikutnya (rekursif)
+        prosesAntrean(); 
+    })
+    .catch(err => console.log("Gagal sinkronisasi: " + err));
+}
+async function cekBatch() {
+const batch = document.getElementById('batchCekInput').value.trim();   // perbaiki di sini
+    const hasilDiv = document.getElementById('hasilBatchCek');            // perbaiki di sini
+    if (!batch) {
+        hasilDiv.style.display = 'block';
+        hasilDiv.innerHTML = '<div class="alert alert-warning">Masukkan nomor batch.</div>';
+        return;
+    }
+    hasilDiv.style.display = 'block';
+    hasilDiv.innerHTML = '<div class="spinner-border text-primary"></div> Mencari...';
+
+    const url = 'https://script.google.com/macros/s/AKfycbwyhyKiPbEU0Ky6cfmfXhjbCEEKvCZBloG6MqALrV-oDRCINDDLxqER25QgPNxDioSL/exec';
+    try {
+        const res = await fetch(`${url}?batch=${encodeURIComponent(batch)}`);
+        const data = await res.json();
+        if (!data.found) {
+            hasilDiv.innerHTML = `<div class="alert alert-danger">Batch "${batch}" tidak ditemukan.</div>`;
+            return;
+        }
+        hasilDiv.innerHTML = `
+            <div class="alert alert-success">✅ Ditemukan:</div>
+            <table class="table table-bordered">
+                <tr><th>Batch</th><td>${escapeHtml(data.batch)}</td></tr>
+                <tr><th>Nama Produk</th><td>${escapeHtml(data.produk)}</td></tr>
+                <tr><th>Tanggal Sampling</th><td>${escapeHtml(data.tanggal)}</td></tr>
+                <tr><th>Petugas</th><td>${escapeHtml(data.petugas)}</td></tr>
+            </table>
+        `;
+    } catch (err) {
+        hasilDiv.innerHTML = '<div class="alert alert-danger">Gagal mengambil data.</div>';
+    }
+}
+
+function escapeHtml(str) { return str ? str.replace(/[&<>]/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m];}) : ''; }
+
+	// Registrasi Service Worker untuk PWA (Taruh di paling bawah script)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Service Worker terdaftar!', reg))
+          .catch(err => console.error('Service Worker gagal:', err));
+      });
+    }
+// Asumsikan dataProduk ada di database-sampling.js
+// Jika nama variabel berbeda, sesuaikan di sini
+function cariProduk() {
+    const keyword = document.getElementById('cariProdukInput').value.toLowerCase().trim();
+    const container = document.getElementById('hasilCariProduk');
+    
+    if (keyword.length < 2) {
+        container.innerHTML = '';
+        return;
+    }
+
+    // Filter dataProduk (pastikan variabel global ini ada)
+    const hasil = dataProduk.filter(item => 
+        item.nama.toLowerCase().includes(keyword) || 
+        item.nie.toLowerCase().includes(keyword)
+    );
+
+    if (hasil.length === 0) {
+        container.innerHTML = '<div class="list-group-item text-muted">Tidak ditemukan.</div>';
+        return;
+    }
+
+    let html = '<div class="list-group" style="max-height: 200px; overflow-y: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">';
+    hasil.forEach(item => {
+        html += `
+            <div class="list-group-item list-group-item-action" style="cursor: pointer;" 
+                 onclick="pilihProduk('${escapeHtml(item.nama)}', '${escapeHtml(item.nie)}')">
+                <strong>${escapeHtml(item.nama)}</strong> <span class="text-muted">(NIE: ${escapeHtml(item.nie)})</span>
+            </div>
+        `;
+    });
+    html += '</div>';
+    container.innerHTML = html;
+}
+
+function pilihProduk(nama, nie) {
+    document.getElementById('namaProduk').value = nama;
+    document.getElementById('nie').value = nie;
+    document.getElementById('cariProdukInput').value = ''; // kosongkan input pencarian
+    document.getElementById('hasilCariProduk').innerHTML = ''; // hilangkan daftar
+}
+
+// Fungsi escapeHtml untuk keamanan
+function escapeHtml(str) {
+    return str ? str.replace(/[&<>]/g, function(m) {
+        return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m];
+    }) : '';
+}
+</script>
+
+</body>
+</html>
